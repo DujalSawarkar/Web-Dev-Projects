@@ -1,0 +1,14 @@
+div{
+    background-color: #60a9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10%;
+}
+.mainpanel{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      
+}
