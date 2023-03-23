@@ -13,7 +13,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;   
-    
+}
+h1{
+    padding-bottom:2% ;
 }
 .inner{
     height: 450px;
@@ -25,6 +27,7 @@ body{
 .div1{
     width: 50%;
     float: left;
+    padding: 20% 2% 20% 2%;
     text-align: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -35,6 +38,24 @@ body{
     align-items: center;
     text-align: center;
     padding: 10%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: rgb(255, 255, 255);
+}
+@media (max-width:800px) {
+    .inner{
+        height: 400px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+    }
+    .div1{
+        display: none;
+    }
+    .div2{
+        width: 350px;
+        background-color: #f38824;
+        border-radius: 10px ;
+    }
 }
 
