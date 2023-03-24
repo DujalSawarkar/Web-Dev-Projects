@@ -8,11 +8,13 @@
 body{
     background-color: #e3e7ff;
 }
+
 .outer{
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;  
+    flex-direction: column; 
 }
 h1{
     padding-bottom:2% ;
@@ -27,7 +29,7 @@ h1{
 .div1{
     width: 50%;
     float: left;
-    padding: 20% 2% 20% 2%;
+    padding: 20% 1% 20% 1%;
     text-align: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -42,20 +44,29 @@ h1{
     border-bottom-right-radius: 10px;
     background-color: rgb(255, 255, 255);
 }
+@media (min-width:800px) {
+    .mid{
+        display: none;
+    }
+}
 @media (max-width:800px) {
     .inner{
-        height: 400px;
-        width: 350px;
+        height: 450px;
+        width: 300px;
         display: flex;
-        justify-content: center;
+        margin-top: 30px;
     }
     .div1{
         display: none;
     }
     .div2{
-        width: 350px;
+        width: 300px;
         background-color: #f38824;
         border-radius: 10px ;
+    }
+    .mid{
+        text-align: center;
+        width: 300px;
     }
 }
 
