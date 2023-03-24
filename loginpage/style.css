@@ -33,7 +33,7 @@ h1{
     text-align: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color:  #f38824;
+    background-color:  #a2a5b9;
 }
 .div2{
     display: flex;
@@ -64,7 +64,7 @@ h1{
     }
     .div2{
         width: 300px;
-        background-color: #f38824;
+        background-color: #a2a5b9;
         border-radius: 10px ;
     }
     .mid{
