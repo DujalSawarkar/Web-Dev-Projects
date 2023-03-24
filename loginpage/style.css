@@ -50,6 +50,9 @@ h1{
     }
 }
 @media (max-width:800px) {
+    .outer{
+        flex-direction: column;
+    }
     .inner{
         height: 450px;
         width: 300px;
