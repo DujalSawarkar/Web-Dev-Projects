@@ -8,7 +8,10 @@
 body{
     background-color: #e3e7ff;
 }
-
+h5{
+    font-weight: 100;
+    margin-top: 10px;
+}
 .outer{
     height: 100vh;
     display: flex;
@@ -36,6 +39,7 @@ h1{
     background-color:  #a2a5b9;
 }
 .div2{
+    width: 31%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -43,6 +47,35 @@ h1{
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: rgb(255, 255, 255);
+}
+#text{
+    font-size: 10mm;
+    
+}
+#email , #password{
+    height: 35px;
+    width: 235px;
+    border-radius: 5px;
+    border: none;
+    background-color: #dfdfdf;
+    margin: 15px;
+}
+.img{
+    height: 65px;
+}
+.btn{
+    background-color: #a2a5b9;
+    height: 33px;
+    width: 100px;
+    border-radius: 40px;
+    font-weight:500 ;
+    font-size: medium;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #8489ad;
 }
 @media (min-width:800px) {
     .mid{
@@ -55,7 +88,7 @@ h1{
     }
     .inner{
         height: 450px;
-        width: 300px;
+        width: 350px;
         display: flex;
         margin-top: 30px;
     }
