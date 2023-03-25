@@ -104,5 +104,8 @@ h1{
         text-align: center;
         width: 300px;
     }
+    .img{
+        height: 65px;
+    }
 }
 
