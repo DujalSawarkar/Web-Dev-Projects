@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto Slab', serif;
+    text-transform: capitalize;
     
 }
 body{
@@ -54,11 +55,21 @@ h1{
 }
 #email , #password{
     height: 35px;
-    width: 235px;
+    width: 100%;
     border-radius: 5px;
     border: none;
     background-color: #dfdfdf;
-    margin: 15px;
+    margin-top: 15px;
+    padding: 5px ;
+
+}
+
+#password{
+    margin-bottom: 15px;
+}
+
+.pass{
+    text-align: left;
 }
 .img{
     height: 65px;
@@ -82,20 +93,18 @@ h1{
         display: none;
     }
 }
-@media (max-width:800px) {
+@media screen and (max-width:800px) {
     .outer{
         flex-direction: column;
     }
     .inner{
-        height: 450px;
-        width: 350px;
-        display: flex;
-        margin-top: 30px;
+        width: auto;
     }
     .div1{
         display: none;
     }
     .div2{
+        overflow: hidden;
         width: 300px;
         background-color: #a2a5b9;
         border-radius: 10px ;
