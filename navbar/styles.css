@@ -4,15 +4,13 @@
     padding: 0px;
     font-family: 'Roboto Slab', serif;
 }
-header{
+.navbar{
     position: fixed;
+    background-color: red;
+    width: 100%;
 }
-nav{
-    width: ;
-    height: 30px;
-    
-}
-div{
+div {
     height: 100vh;
-    border: solid 1px black;
+    overflow:hidden ;
+   
 }
