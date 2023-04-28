@@ -5,12 +5,30 @@
     font-family: 'Roboto Slab', serif;
 }
 .navbar{
-    position: fixed;
-    background-color: red;
-    width: 100%;
+    background-color: rgb(247, 164, 215); 
 }
-div {
+.navbar ul{
+    overflow: auto;
+}
+.navbar li{
+    float: right;
+    list-style: none;
+    margin:15px 10px;
+    
+}
+.navbar a{
+    text-decoration: none;
+    color: aliceblue;
+}
+div{
     height: 100vh;
-    overflow:hidden ;
-   
+    border-bottom: 2px solid black;
+}
+.img1{
+    height: 100vh;
+    /* width: 50%; */
+    /* overflow: auto; */
+}
+.about{
+    margin-left:50% ;
 }
