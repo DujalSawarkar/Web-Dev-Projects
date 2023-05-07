@@ -8,9 +8,11 @@
 .navbar{
     background-color: rgb(247, 164, 215); 
     border-bottom: 1px solid rgb(184, 126, 162);
+    /* position: fixed; */
 }
 .navbar ul{
     overflow: auto;
+            
 }
 .navbar li{
     float:right;
