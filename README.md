@@ -5,5 +5,5 @@
 
 1. [Login Page](https://dujalsawarkar.github.io/Web-Dev-Projects/loginpage/)
 2. [price panel](https://dujalsawarkar.github.io/Web-Dev-Projects/Price%20Panel/)
-3. [icecream website](https://dujalsawarkar.github.io/Web-Dev-Projects/navbar/)
+3. [icecream website](https://dujalsawarkar.github.io/Web-Dev-Projects/icecream/)
 <hr>
