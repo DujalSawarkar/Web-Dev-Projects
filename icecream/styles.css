@@ -30,7 +30,7 @@
   color: rgb(0, 0, 0);
 }
 
-.logo {
+.mainlogo {
   height: 3rem;
   color: rgb(255, 255, 255);
 }
@@ -54,7 +54,7 @@
   /* justify-content: space-between; */
 }
 .photo1 img{
-  width: 50%;
+  width: 49%;
   height: 95%;
   padding: 8px 3px 10px 10px;
 }
@@ -129,4 +129,36 @@
   background-position: center;
   background-size: 180%;
   background-repeat: no-repeat;
+}
+.logos{
+  padding-top: 18px;
+  width: 100%;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+ gap: 1.5em;
+}
+.logo{
+  border: 1px solid black;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.logo:hover{
+  cursor: pointer;
+}
+.logo img{
+  height: 35px;
+  width: 35px;
+}
+.logo :nth-child(3){
+  height: 30px;
+}
+.logo :hover{
+  transform: translateY(-100%);
+  transition: 0.6s ease-in-out;
 }
