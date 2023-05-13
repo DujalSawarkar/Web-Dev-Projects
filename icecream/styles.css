@@ -35,9 +35,10 @@
   color: rgb(255, 255, 255);
 }
 .div1 {
-  height: 80vh;
+  height: 100vh;
   background-image: url(imgs/mainicecream.png);
   background-size: cover;
+  
 }
 .maindiv {
   height: 100vh;
