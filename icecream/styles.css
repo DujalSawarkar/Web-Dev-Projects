@@ -180,9 +180,8 @@
   top: 0;
   right: -100%;
   position: absolute;
-  /* background-color: aqua; */
   backdrop-filter: blur(5px);
- transition: 0.5s;
+ transition: 0s;
 }
 .external-div:hover .info{
   right: 0;
