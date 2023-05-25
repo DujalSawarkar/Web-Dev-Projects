@@ -181,7 +181,7 @@
   right: -100%;
   position: absolute;
   backdrop-filter: blur(5px);
- transition: 0s;
+ transition: 1s;
 }
 .external-div:hover .info{
   right: 0;
