@@ -24,7 +24,8 @@ body{
 .row{
     width: 100%;
     margin: 2rem;
-    /* margin-left: 0px; */
+    font-size: 19px;
+    font-weight: 600;
 }
 .btn{
     width: 100%;
