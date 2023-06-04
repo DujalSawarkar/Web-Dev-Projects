@@ -3,7 +3,7 @@
 
 <h3>HTML & CSS Projects</h3>  
 
-1. [Login Page](https://dujalsawarkar.github.io/Web-Dev-Projects/loginpage/)
-2. [price panel](https://dujalsawarkar.github.io/Web-Dev-Projects/Price%20Panel/)
-3. [icecream website](https://dujalsawarkar.github.io/Web-Dev-Projects/icecream/)
+1. [Login Page](https://dujalsawarkar.github.io/Web-Dev-Projects/html-css-project/loginpage/)
+2. [price panel](https://dujalsawarkar.github.io/Web-Dev-Projects/html-css-project/Price%20Panel/)
+3. [icecream website](https://dujalsawarkar.github.io/Web-Dev-Projects/html-css-project/icecream/)
 <hr>
