@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@300&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+/* font-family: 'Quicksand', sans-serif; */
+}
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(116, 243, 243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  width: 600px;
+  min-height: 500px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 15px;
+  box-shadow: 2px 5px 12px black;
+
+}
+#item{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    box-shadow: 3px 4px 9px grey;
+    display:block;
+}
+#to-do-list li{
+    font-size: 18px;
+    font-weight: 500;
+    list-style: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: grey;
+    position: relative;
+    padding-right: 20px;
+    text-align: justify;
+}
+#to-do-list li i{
+    top: 10px;
+    position: absolute;
+    right: 10px;
+}
+.done{
+    text-decoration: line-through;
+    color: black;
+    background-color: rgb(192, 192, 192) !important;
+}
