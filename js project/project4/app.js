@@ -19,9 +19,28 @@ const getpass = (password = "") => {
 if(upperinput.checked){
     password += getrandomdata(upperset);
 }
-console.log(password);
+
+if(lowerinput.checked){
+    password += getrandomdata(lowerset);
+}
+
+if(numberinput.checked){
+    password += getrandomdata(numberset);
+}
+
+if(symbolinput.checked){
+    password += getrandomdata(symbolset);
+}
+
+if(password.length < totalchar.value){
+    return getpass(password);
+}
+const resultpass = password.slice(0,totalchar.value);
+passbox.innerText = resultpass;
+console.log(resultpass)
 }
 
 button.addEventListener("click", function(){
 getpass();
 })
+
