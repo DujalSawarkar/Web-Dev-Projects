@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project4</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>password generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="box">
+        <div id="pass-box"></div>
+        <div class="row">
+          <div class="Left">Password Length</div>
+          <div class="right">
+            <input type="number" name="" id="total-char" value="8" />
+          </div>
+        </div>
+        <div class="row">
+          <label for="UpperCase">
+            <div class="Left">Contain UpperCase</div>
+          </label>
+          <div class="right"><input type="checkbox" name="" id="UpperCase" /></div>
+        </div>
+        <div class="row">
+          <label for="UpperCase">
+            <div class="Left">Contain LowerCase</div>
+          </label>
+          <div class="right"><input type="checkbox" name="" id="LowerCase" /></div>
+        </div>
+        <div class="row">
+          <label for="UpperCase">
+            <div class="Left">Contain Number</div>
+          </label>
+          <div class="right"><input type="checkbox" name="" id="number" /></div>
+        </div>
+        <div class="row">
+          <label for="UpperCase">
+            <div class="Left">Contain Symbol</div>
+          </label>
+          <div class="right"><input type="checkbox" name="" id="Symbol" /></div>
+        </div>
+        
+            <button class="btn">Generate</button>
+        
+      </div>
+    </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
