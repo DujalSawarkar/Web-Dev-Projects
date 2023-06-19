@@ -6,6 +6,10 @@ const SEARCHAPI =
 
 const moviebox = document.querySelector("#movie-box")
 const search =document.querySelector("#search")
+
+
+
+
 const getmovie = async (api) => {
   const response = await fetch(api);
   const data = await response.json();
