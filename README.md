@@ -12,6 +12,7 @@
 
 
 1. [To Do List](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project3/)
-1. [Password Generator](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project4/)
+2. [Password Generator](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project4/)
+3. [Movie Search App](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project5/)
 
 
