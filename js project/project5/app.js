@@ -9,13 +9,14 @@ const search =document.querySelector("#search")
 
 
 
-
 const getmovie = async (api) => {
   const response = await fetch(api);
   const data = await response.json();
   console.log(data);
   showmovie(data.results);
 };
+
+
 
 
 
