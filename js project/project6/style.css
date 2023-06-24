@@ -73,7 +73,7 @@ input {
     width: 150px;
 }
 
-#repo{
+.repo{
     background-color: #2a2a72;
     border-radius: 5px;
     display: inline-block;
