@@ -6,14 +6,20 @@ const geturl = async (username) => {
   const Response = await fetch(giturl + username);
   const data = await Response.json();
   console.log(data);
-  showdata(data);
+  const boxdiv = document.createElement("div");
+
+    showdata(data);
+    getrepo(username)
+  
 };
 // geturl("DujalSawarkar");
 
 const showdata = (item) => {
   const maindiv = document.querySelector("#main");
+  maindiv.innerHTML=""
   const boxdiv = document.createElement("div");
   boxdiv.classList.add("box");
+
   boxdiv.innerHTML = ` 
   <div>
   <img src="${item.avatar_url}" alt="" id="pic" />
@@ -33,9 +39,21 @@ const showdata = (item) => {
   </ul> `;
  
   maindiv.appendChild(boxdiv);
-  console.log("done");
+ 
+  // console.log("done");
 };
+
 
 input.addEventListener("focusout", function () {
   geturl(input.value);
 });
+
+const getrepo = async (username) => {
+  const Response = await fetch(giturl + username + "/repos");
+  const data = await Response.json();
+  console.log(data);
+
+  
+  
+  
+};
