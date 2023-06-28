@@ -43,8 +43,8 @@ const showdata = (item) => {
   // console.log("done");
 };
 
-
-input.addEventListener("focusout", function () {
+const btn = document.querySelector(".btn")
+btn.addEventListener("click", function () {
   geturl(input.value);
 });
 
@@ -52,7 +52,14 @@ const getrepo = async (username) => {
   const Response = await fetch(giturl + username + "/repos");
   const data = await Response.json();
   console.log(data);
-
+  data.forEach(Element=> {
+    const content = document.querySelector(".content")
+    const repo = document.createElement("div")
+    repo.classList.add("repo")
+    content.append(repo)
+    repo.innerHTML=` <a class="repo" href="${Element.html_url}">${Element.name}</a>`
+    // console.log(Element.name)
+  });
   
   
   
