@@ -8,15 +8,14 @@ const geturl = async (username) => {
   console.log(data);
   const boxdiv = document.createElement("div");
 
-    showdata(data);
-    getrepo(username)
-  
+  showdata(data);
+  getrepo(username);
 };
 // geturl("DujalSawarkar");
 
 const showdata = (item) => {
   const maindiv = document.querySelector("#main");
-  maindiv.innerHTML=""
+  maindiv.innerHTML = "";
   const boxdiv = document.createElement("div");
   boxdiv.classList.add("box");
 
@@ -37,13 +36,13 @@ const showdata = (item) => {
     <li>${item.following}</li>
     <li>${item.public_repos}</li>
   </ul> `;
- 
+
   maindiv.appendChild(boxdiv);
- 
+
   // console.log("done");
 };
 
-const btn = document.querySelector(".btn")
+const btn = document.querySelector(".btn");
 btn.addEventListener("click", function () {
   geturl(input.value);
 });
@@ -51,16 +50,13 @@ btn.addEventListener("click", function () {
 const getrepo = async (username) => {
   const Response = await fetch(giturl + username + "/repos");
   const data = await Response.json();
-  console.log(data);
-  data.forEach(Element=> {
-    const content = document.querySelector(".content")
-    const repo = document.createElement("div")
-    repo.classList.add("repo")
-    content.append(repo)
-    repo.innerHTML=` <a class="repo" href="${Element.html_url}">${Element.name}</a>`
+  // console.log(data);
+  data.forEach((Element) => {
+    const content = document.querySelector(".content");
+    const repo = document.createElement("div");
+    repo.classList.add("repo");
+    content.append(repo);
+    repo.innerHTML = ` <a class="repo" href="${Element.html_url}">${Element.name}</a>`;
     // console.log(Element.name)
   });
-  
-  
-  
 };
