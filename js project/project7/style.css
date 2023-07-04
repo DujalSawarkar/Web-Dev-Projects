@@ -1,6 +1,28 @@
-
-
 * {
   margin: 0px;
   padding: 0px;
+}
+.box{
+  width: 400px;
+}
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(119, 169, 243);
+  /* opacity: ; */
+}
+input {
+  height: 40px;
+  width: 300px;
+  border-radius: 30px;
+  border: 1px solid black;
+  margin: 30px;
+}
+.infodiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; 
 }
