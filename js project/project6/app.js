@@ -43,7 +43,8 @@ const showdata = (item) => {
 };
 
 const btn = document.querySelector(".btn");
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function (e) {
+  e.preventDefault();
   geturl(input.value);
 });
 
