@@ -15,5 +15,6 @@
 2. [Password Generator](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project4/)
 3. [Movie Search App](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project5/)
 4. [Github Search ](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project6/)
+5. [Weather App](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project7/)
 
 
