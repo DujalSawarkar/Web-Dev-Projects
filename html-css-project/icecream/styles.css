@@ -37,7 +37,7 @@
 }
 .maindiv {
   height: 100vh;
-  border-bottom: 2px solid rgb(184, 126, 162);
+  border-bottom: 2px solid rgb(180, 131, 161);
   width: 100%;
   display: flex;
   background-color: #ecffec;
