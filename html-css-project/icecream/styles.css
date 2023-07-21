@@ -42,7 +42,13 @@
   display: flex;
   background-color: #ecffec;
 }
-
+.about p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  text-align: center;
+  color: rgb(23, 66, 240);
+  margin-top: 50%;
+}
 .photo1{
   height: 50%;
   width: 97%;
