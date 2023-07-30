@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-<div></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tic tac toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>tic tac toe</li>
+      </ul>
+    </nav>
 
+    <div class="main">
+      <div class="game">
+        <div class="container bt bl bb"><span id="item"></span></div>
+        <div class="container bt bl bb"><span id="item"></span></div>
+        <div class="container bt bl br bb"><span id="item"></span></div>
+        <div class="container bl bb"><span id="item"></span></div>
+        <div class="container bb bl"><span id="item"></span></div>
+        <div class="container bb bl br"><span id="item"></span></div>
+        <div class="container bl bb"><span id="item"></span></div>
+        <div class="container bl bb"><span id="item"></span></div>
+        <div class="container bb br bl"><span id="item"></span></div>
+      </div>
+      <div class="info">
+        <h1>Welcome to the game</h1>
+        <div class="gameinfo">now x Tern</div>
+        <button class="reset">Reset</button>
+      </div>
+    </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
