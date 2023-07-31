@@ -16,5 +16,10 @@
 3. [Movie Search App](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project5/)
 4. [Github Search ](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project6/)
 5. [Weather App](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project7/)
+<hr>
+
+<h3> JS Game </h3> 
+
+1. [Tic Tac Toe](https://dujalsawarkar.github.io/Web-Dev-Projects/js%20project/project8/)
 
 
