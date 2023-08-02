@@ -2,6 +2,7 @@ const box = document.getElementsByClassName("container");
 const btn = document.querySelector(".reset");
 let item = document.querySelector("#item");
 let span = document.getElementsByTagName("span");
+let allspan = document.querySelectorAll("span");
 let turn = "x";
 
 const changeturn = () => {
@@ -34,8 +35,10 @@ const winner = () => {
       span[e[1]].innerText != ""
     ) {
       console.log("win");
+      return true;
       // resetbtn();
     }
+    
   });
 };
 // changeturn();
@@ -52,7 +55,7 @@ Array.from(box).forEach((e) => {
       const info = document.getElementsByClassName("gameinfo");
 
       info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
-      winner();
+      const win = winner();
     }
   });
 });
