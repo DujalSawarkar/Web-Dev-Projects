@@ -1,6 +1,7 @@
 const box = document.getElementsByClassName("container");
 const btn = document.querySelector(".reset");
-
+let item = document.querySelector("#item");
+let span = document.getElementsByTagName("span");
 let turn = "x";
 
 const changeturn = () => {
@@ -14,8 +15,6 @@ const changeturn = () => {
 };
 
 const winner = () => {
-  let item = document.querySelector("#item");
-
   let winposib = [
     [0, 1, 2],
     [3, 4, 5],
@@ -26,13 +25,16 @@ const winner = () => {
     [0, 4, 8],
     [2, 4, 6],
   ];
-
   winposib.forEach((e) => {
     if (
-      item[e[0]].innerText == item[e[1]].innerText &&
-      item[e[1]].innerText == item[e[2]].innerText
+      span[e[0]].innerText == span[e[1]].innerText &&
+      span[e[1]].innerText == span[e[2]].innerText &&
+      span[e[0]].innerText != "" &&
+      span[e[2]].innerText != "" &&
+      span[e[1]].innerText != ""
     ) {
-      console.log("winn");
+      console.log("win");
+      // resetbtn();
     }
   });
 };
@@ -55,13 +57,14 @@ Array.from(box).forEach((e) => {
   });
 });
 
-Array.from(box).forEach((e) => {
-  btn.addEventListener("click", () => {
+const resetbtn = () => {
+  Array.from(box).forEach((e) => {
     let item = e.querySelector("#item");
-
+    // console.log("in");
     item.innerText = "";
     turn = "x";
     const info = document.getElementsByClassName("gameinfo");
     info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
   });
-});
+};
+// btn.addEventListener("click", resetbtn());
