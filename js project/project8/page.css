@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(212, 219, 202);
+}
+.upper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s;
+}
+.middle-div {
+  /* margin: 0px 120px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+.middle-div h1 {
+  width: 350px;
+}
+.img-1,
+.img-2 {
+  height: 600px;
+  width: 600px;
+  transform: rotate(25deg);
+}
+.img-2 {
+  /* transform: ; */
+  transform: scaleX(-1) rotate(25deg);
+}
+nav {
+  opacity: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(194, 171, 212);
+  position: absolute;
+  top: 0;
+}
+nav li {
+  position: absolute;
+  top: 25%;
+  right: 50%;
+  list-style: none;
+  font-size: 27px;
+  font-weight: 700;
+}
+.main {
+  opacity: 0;
+  top: 10%;
+  left: 22%;
+  /* position: absolute; */
+  transition: 0.9s;
+  height: 91vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+}
+.game {
+  transition: 1s;
+  display: grid;
+  grid-template-columns: repeat(3, 20vh);
+  grid-template-rows: repeat(3, 20vh);
+}
+.container {
+  border: 2px solid black;
+  font-size: 15vh;
+  padding-bottom: 14px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.container:hover {
+  background-color: rgb(201, 182, 219);
+}
+#item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  /* background-color: black;      */
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.bt {
+  border-top: none;
+}
+.bb {
+  border-bottom: none;
+}
+.bl {
+  border-left: none;
+}
+.br {
+  border-right: none;
+}
+.gameinfo {
+}
+button {
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  background-color: rgb(194, 171, 212);
+  /* transition: 0.2s; */
+}
+button:hover {
+  background-color: rgb(167, 120, 221);
+  padding-bottom: 1px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}

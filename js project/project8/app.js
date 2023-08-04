@@ -3,8 +3,13 @@ const btn = document.querySelector(".reset");
 let item = document.querySelector("#item");
 let span = document.getElementsByTagName("span");
 let allspan = document.querySelectorAll("span");
+let start = document.querySelector("#on-btn");
+const maindiv = document.querySelector(".main");
+const middlediv = document.querySelector(".middle-div");
+const nav = document.querySelector("nav");
+const gamediv = document.querySelector(".game");
 let turn = "x";
-
+// let win = false;
 const changeturn = () => {
   if (turn === "x") {
     // turn = "0";
@@ -14,8 +19,16 @@ const changeturn = () => {
     return "x";
   }
 };
-
+start.addEventListener("click", () => {
+  console.log("gg");
+  maindiv.style.position = "absolute";
+  middlediv.style.opacity = "0";
+  maindiv.style.opacity = "1";
+  nav.style.opacity = "1";
+});
 const winner = () => {
+  const info = document.getElementsByClassName("gameinfo");
+  turn = changeturn();
   let winposib = [
     [0, 1, 2],
     [3, 4, 5],
@@ -35,10 +48,13 @@ const winner = () => {
       span[e[1]].innerText != ""
     ) {
       console.log("win");
-      return true;
+      gamediv.style.display = "none";
+      info[0].innerText = ` win ${turn} `;
+      // return true;
       // resetbtn();
+    } else {
+      info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
     }
-    
   });
 };
 // changeturn();
@@ -50,12 +66,7 @@ Array.from(box).forEach((e) => {
 
     if (item.innerText === "") {
       item.innerText = turn;
-
-      turn = changeturn();
-      const info = document.getElementsByClassName("gameinfo");
-
-      info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
-      const win = winner();
+      winner();
     }
   });
 });
@@ -68,6 +79,7 @@ const resetbtn = () => {
     turn = "x";
     const info = document.getElementsByClassName("gameinfo");
     info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
+    gamediv.style.display = "grid";
   });
 };
 // btn.addEventListener("click", resetbtn());
