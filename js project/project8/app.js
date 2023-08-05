@@ -73,7 +73,7 @@ Array.from(box).forEach((e) => {
       winner();
       turn = changeturn();
       if (!gameover) {
-        info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
+        info[0].innerHTML = `<h1> Now Tern For ${turn} </h1>`;
       }
     }
   });
@@ -86,8 +86,9 @@ const resetbtn = () => {
     item.innerText = "";
     turn = "x";
     const info = document.getElementsByClassName("gameinfo");
-    info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
+    info[0].innerHTML = `<h1> Now Tern For ${turn} </h1>`;
     gamediv.style.display = "grid";
+    winInfo.classList.remove("active-win");
   });
 };
 // btn.addEventListener("click", resetbtn());
