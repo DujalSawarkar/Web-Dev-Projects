@@ -8,7 +8,7 @@ const maindiv = document.querySelector(".main");
 const middlediv = document.querySelector(".middle-div");
 const nav = document.querySelector("nav");
 const gamediv = document.querySelector(".game");
-
+const winInfo = document.querySelector(".info");
 let gameover = false;
 let turn = "x";
 // let win = false;
@@ -51,13 +51,14 @@ const winner = () => {
     ) {
       console.log("win");
       gamediv.style.display = "none";
+      winInfo.classList.add("active-win");
       info[0].innerHTML = `<h1>Winner is  ${turn} </h1>`;
       // return true;
       // resetbtn();
       gameover = true;
     }
   });
-};  
+};
 // changeturn();
 
 Array.from(box).forEach((e) => {
