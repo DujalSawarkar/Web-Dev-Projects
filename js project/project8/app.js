@@ -8,6 +8,8 @@ const maindiv = document.querySelector(".main");
 const middlediv = document.querySelector(".middle-div");
 const nav = document.querySelector("nav");
 const gamediv = document.querySelector(".game");
+
+let gameover = false;
 let turn = "x";
 // let win = false;
 const changeturn = () => {
@@ -28,7 +30,7 @@ start.addEventListener("click", () => {
 });
 const winner = () => {
   const info = document.getElementsByClassName("gameinfo");
-  turn = changeturn();
+
   let winposib = [
     [0, 1, 2],
     [3, 4, 5],
@@ -49,24 +51,29 @@ const winner = () => {
     ) {
       console.log("win");
       gamediv.style.display = "none";
-      info[0].innerText = ` win ${turn} `;
+      info[0].innerHTML = `<h1>Winner is  ${turn} </h1>`;
       // return true;
       // resetbtn();
-    } else {
-      info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
+      gameover = true;
     }
   });
-};
+};  
 // changeturn();
 
 Array.from(box).forEach((e) => {
   e.addEventListener("click", () => {
     // console.log("hii");
     let item = e.querySelector("#item");
+    const info = document.getElementsByClassName("gameinfo");
 
     if (item.innerText === "") {
       item.innerText = turn;
+
       winner();
+      turn = changeturn();
+      if (!gameover) {
+        info[0].innerHTML = `<h2> Now Tern For ${turn} </h2>`;
+      }
     }
   });
 });

@@ -55,6 +55,7 @@ nav li {
   list-style: none;
   font-size: 27px;
   font-weight: 700;
+  
 }
 .main {
   opacity: 0;
@@ -99,7 +100,9 @@ nav li {
   flex-direction: column;
   gap: 4rem;
 }
-
+.active-win{
+  padding-left: 250px;
+}
 .bt {
   border-top: none;
 }
@@ -112,8 +115,7 @@ nav li {
 .br {
   border-right: none;
 }
-.gameinfo {
-}
+
 button {
   height: 40px;
   width: 150px;
