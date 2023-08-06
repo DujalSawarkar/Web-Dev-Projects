@@ -5,7 +5,7 @@
 
 1. [Login Page](https://dujalsawarkar.github.io/Web-Dev-Projects/html-css-project/loginpage/)
 2. [price panel](https://dujalsawarkar.github.io/Web-Dev-Projects/html-css-project/Price%20Panel/)
-3. [icecream website](https://glaciescrepito.netlify.app/)
+3. [icecream website (deployed in netlify)](https://glaciescrepito.netlify.app/)
 <hr>
 
 <h3> JS Project </h3>
