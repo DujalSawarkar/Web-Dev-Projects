@@ -25,7 +25,7 @@ const getdata = async (city) => {
   const infodiv = document.createElement("div");
   infodiv.classList.add("info");
   infodiv.innerHTML = `
-          <h1>${data.main.temp} °C</h1>
+          <h1>${ data.main.temp} °C</h1>
 
           <h2>${data.name}</h2>
           <p>
