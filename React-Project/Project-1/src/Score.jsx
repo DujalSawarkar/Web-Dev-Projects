@@ -24,6 +24,7 @@ export default function Score({ numPlayers }) {
               <li key={idx}>
                 Player{idx + 1} : {score}
                 <button onClick={() => insNo(idx)}>+1</button>
+                
               </li>
             );
           })}
