@@ -14,6 +14,7 @@ export default function Score({ numPlayers }) {
   };
 
   
+  
   return (
     <div>
       <ul>
