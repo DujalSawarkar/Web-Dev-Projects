@@ -30,6 +30,7 @@ export default function Score({ numPlayers }) {
               
             );
           })}
+          
         </ul>
       </ul>
     </div>
