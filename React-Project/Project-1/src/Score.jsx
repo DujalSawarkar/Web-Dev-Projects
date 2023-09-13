@@ -16,6 +16,7 @@ export default function Score({ numPlayers }) {
   
   
   return (
+    
     <div>
       <ul>
         <h1>Heyyy</h1>
