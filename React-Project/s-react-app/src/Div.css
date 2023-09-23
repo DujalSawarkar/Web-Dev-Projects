@@ -1,0 +1,16 @@
+.Maindiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 300px;
+  background-color: white;
+  color: black;
+  padding:  0px 15px;
+}
+hr {
+  height: 90%;
+}
+h2 {
+  font-size: 40px;
+}
