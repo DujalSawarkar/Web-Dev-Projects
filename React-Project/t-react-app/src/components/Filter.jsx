@@ -1,11 +1,10 @@
-export default function Filter() {
+export default function Filter(props) {
+  let filterData = props.filterData;
   return (
     <div>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
+      {filterData.map((e) => {
+        return <button key={e.id}>{e.title}</button>;
+      })}
     </div>
   );
 }
