@@ -16,9 +16,9 @@ export default function Cards(props) {
   let Allcourses = Getcoursec(courses);
   return (
     <div>
-      {Allcourses.map((course) => {
-        <Card key={course.id} course={course} />;
-      })}
+      {Allcourses.map((course) => (
+        <Card key={course.id} course={course} />
+      ))}
     </div>
   );
 }
