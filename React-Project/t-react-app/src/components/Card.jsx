@@ -2,7 +2,7 @@
 
 const Card = (props) => {
   let course = props.course;
-  console.log(course);
+  // console.log(course);
   return (
     <div>
       <div>

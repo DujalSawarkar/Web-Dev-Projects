@@ -13,6 +13,7 @@ export default function Cards(props) {
     // console.log(Allcourses);
     return Allcourses;
   }
+
   let Allcourses = Getcoursec(courses);
   return (
     <div>
