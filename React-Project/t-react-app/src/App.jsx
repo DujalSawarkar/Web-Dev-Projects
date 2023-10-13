@@ -9,13 +9,15 @@ import Loader from "./components/Loader";
 function App() {
   const [courses, setcourses] = useState(null);
   const [Loading, setLoading] = useState(true);
-
+  const [data, setdata] = useState(filterData[0].title);
+  // console.log(data);
   async function Fetchdata() {
     setLoading(true);
     try {
       let response = await fetch(apiUrl);
       let output = await response.json();
       // console.log(output);
+
       setcourses(output.data);
     } catch (error) {
       console.log("error");
@@ -32,9 +34,11 @@ function App() {
         <Navbar />
       </div>
       <div>
-        <Filter filterData={filterData} />
+        <Filter filterData={filterData} data={data} setdata={setdata} />
       </div>
-      <div>{Loading ? <Loader /> : <Cards courses={courses} />}</div>
+      <div>
+        {Loading ? <Loader /> : <Cards courses={courses} data={data} />}
+      </div>
     </div>
   );
 }

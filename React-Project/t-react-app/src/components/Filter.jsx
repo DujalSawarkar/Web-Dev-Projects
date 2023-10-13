@@ -1,14 +1,17 @@
 export default function Filter(props) {
   let filterData = props.filterData;
-  function ChangeCource() {
-     
+  let Data = props.data;
+  let setData = props.setdata;
+  function ChangeCource(title) {
+    // let title = props.title;
+    setData(title);
+    // console.log(title);
   }
-
   return (
     <div>
       {filterData.map((e) => {
         return (
-          <button onClick={ChangeCource} key={e.id}>
+          <button onClick={() => ChangeCource(e.title)} key={e.id}>
             {e.title}
           </button>
         );
