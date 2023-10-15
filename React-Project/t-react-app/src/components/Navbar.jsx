@@ -1,3 +1,5 @@
+import "./Navbar.css";
+
 export default function Navbar() {
-  return <div>Navbar</div>;
+  return <div className="Navbar">Cources</div>;
 }

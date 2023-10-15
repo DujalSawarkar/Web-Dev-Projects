@@ -1,3 +1,4 @@
+import "./Filter.css";
 export default function Filter(props) {
   let filterData = props.filterData;
   let Data = props.data;
@@ -8,10 +9,10 @@ export default function Filter(props) {
     // console.log(title);
   }
   return (
-    <div>
+    <div className="Filters">
       {filterData.map((e) => {
         return (
-          <button onClick={() => ChangeCource(e.title)} key={e.id}>
+          <button className="Btn" onClick={() => ChangeCource(e.title)  } key={e.id}>
             {e.title}
           </button>
         );

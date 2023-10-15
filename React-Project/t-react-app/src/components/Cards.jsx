@@ -1,5 +1,5 @@
 import Card from "./Card";
-
+import "./Cards.css";
 export default function Cards(props) {
   let courses = props.courses;
   let data = props.data;
@@ -21,7 +21,7 @@ export default function Cards(props) {
 
   let Allcourses = Getcoursec(courses);
   return (
-    <div>
+    <div className="All-Card">
       {Allcourses.map((course) => (
         <Card key={course.id} course={course} />
       ))}

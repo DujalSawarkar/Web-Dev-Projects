@@ -1,0 +1,21 @@
+.Filters {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.Btn {
+  height: 45px;
+  width: 150px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(207, 191, 223);
+  font-size: 20px;
+  font-weight: 550;
+}
+.Btn:hover{
+    cursor: pointer;
+background-color: rgb(141, 103, 177);
+}
