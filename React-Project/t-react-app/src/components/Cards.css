@@ -1,9 +1,14 @@
 .All-Card {
   /* margin: auto ; */
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 33%);
   grid-template-rows: repeat(3, 600px);
   place-items: center;
-  place-content: center;
+  place-content: center; */
   /* margin-top: ; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px 40px;
 }

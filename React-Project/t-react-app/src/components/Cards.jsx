@@ -11,8 +11,6 @@ export default function Cards(props) {
           Allcourses.push(data);
         });
       });
-      // console.log(Allcourses);
-      // console.log(courses[data]);
       return Allcourses;
     } else {
       return courses[data];
