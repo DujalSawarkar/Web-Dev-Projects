@@ -3,6 +3,7 @@ import "./Cards.css";
 export default function Cards(props) {
   let courses = props.courses;
   let data = props.data;
+  const FavCourse = props.FavCourse;
   function Getcoursec(courses) {
     let Allcourses = [];
     if (data == "All") {
@@ -21,7 +22,7 @@ export default function Cards(props) {
   return (
     <div className="All-Card">
       {Allcourses.map((course) => (
-        <Card key={course.id} course={course} />
+        <Card key={course.id} course={course} FavCourse={FavCourse} />
       ))}
     </div>
   );

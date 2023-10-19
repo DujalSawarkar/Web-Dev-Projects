@@ -6,10 +6,12 @@ import Filter from "./components/Filter";
 import Navbar from "./components/Navbar";
 import { useEffect } from "react";
 import Loader from "./components/Loader";
+
 function App() {
   const [courses, setcourses] = useState(null);
   const [Loading, setLoading] = useState(true);
   const [data, setdata] = useState(filterData[0].title);
+  const FavCourse = [];
   // console.log(data);
   async function Fetchdata() {
     setLoading(true);
@@ -37,7 +39,11 @@ function App() {
         <Filter filterData={filterData} data={data} setdata={setdata} />
       </div>
       <div>
-        {Loading ? <Loader /> : <Cards courses={courses} data={data} />}
+        {Loading ? (
+          <Loader />
+        ) : (
+          <Cards courses={courses} data={data} FavCourse={FavCourse} />
+        )}
       </div>
     </div>
   );

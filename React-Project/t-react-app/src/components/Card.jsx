@@ -1,19 +1,25 @@
-// import react_svg from "../assets/react.svg";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import "./card.css";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Card = (props) => {
   const styles = {
     fontSize: "30px",
   };
+  const FavCourse = props.FavCourse;
   let course = props.course;
+  // console.log(course);
   const [isliked, setisliked] = useState(false);
   // console.log(course);
+  // console.log(FavCourse);
   const LikedFun = () => {
     setisliked((prev) => !prev);
-    isliked ? console.log("true") : console.log("false");
+    FavCourse.push(course);
+    console.log(FavCourse);
+    isliked ? toast.error("unliked") : toast.success("liked");
   };
 
   return (
@@ -40,4 +46,5 @@ const Card = (props) => {
     </div>
   );
 };
+
 export default Card;
