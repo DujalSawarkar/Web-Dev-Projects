@@ -1,7 +1,7 @@
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
-import "./card.css";
+import "./Card.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import { filterData, apiUrl } from "./data";
-import Cards from "./components/Cards";
-import Filter from "./components/Filter";
-import Navbar from "./components/Navbar";
 import { useEffect } from "react";
-import Loader from "./components/Loader";
+import Navbar from "./components/NavBar/Navbar";
+import Filter from "./components/Filter/Filter";
+import Loader from "./components/Loader/Loader";
+import Cards from "./components/Cards/Cards";
 
 function App() {
   const [courses, setcourses] = useState(null);

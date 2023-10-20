@@ -1,7 +1,8 @@
-import Card from "./Card";
+import Card from "./Card/Card";
 import "./Cards.css";
 export default function Cards(props) {
   let courses = props.courses;
+  console.log(courses);
   let data = props.data;
   const FavCourse = props.FavCourse;
   function Getcoursec(courses) {

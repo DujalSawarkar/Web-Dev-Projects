@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./Filter.css";
 export default function Filter(props) {
   let filterData = props.filterData;
@@ -12,7 +13,14 @@ export default function Filter(props) {
     <div className="Filters">
       {filterData.map((e) => {
         return (
-          <button className="Btn" onClick={() => ChangeCource(e.title)  } key={e.id}>
+          <button
+            className={`Btn`}
+            onClick={(event) => {
+              // event.preventDefault();
+              ChangeCource(e.title);
+            }}
+            key={e.id}
+          >
             {e.title}
           </button>
         );
