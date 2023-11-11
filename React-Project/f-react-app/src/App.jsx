@@ -1,63 +1,35 @@
-// import "./App.css";
-import Game from "./game";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-import D from "./Dujal";
-
-import Shopping from "./Shopping";
-
-import Propertylist from "./Propertylist";
-import Clicker from "./Clicker";
-import Counter from "./Counter";
-
-import Toggle from "./Toggle";
-// import Color from "./Color";
-
-import ColorBox from "./ColorBox";
-// const data = [
-//   { id : 1, item: "banana", quantity: 12, completed: true },
-//   { id : 2, item: "egg", quantity: 12, completed: false },
-//   { id : 3, item: "paneer", quantity: 1, completed: true },
-//   { id : 4, item: "milk", quantity: 2, completed: false },
-// ];
-const properties = [
-  { id: 129031, name: "Desert Yurt", rating: 4.9, price: 150 },
-  { id: 129331, name: "Lone Mountain Cabin", rating: 4.8, price: 250 },
-  { id: 129032, name: "Cactus Retreat", rating: 4.75, price: 300 },
-  { id: 129033, name: "Redwood Treehouse Escape", rating: 4.9, price: 120 },
-  { id: 129034, name: "Oceanview Condo", rating: 4.7, price: 140 },
-  { id: 129035, name: "Gold Miner Campground", rating: 4.69, price: 96 },
-];
-const colors = [
-  "#E53935",
-  "#E91E63",
-  "#9C27B0",
-  "#673AB7",
-  "#3F51B5",
-  "#2196F3",
-  "#03A9F4",
-  "#00BCD4",
-  "#009688",
-  "#4CAF50",
-  "#8BC34A",
-  "#CDDC39",
-  "#FFEB3B",
-  "#FFC107",
-  "#FF9800",
-  "#FF5722",
-];
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div>
-      {/* <h1>heyyy</h1> */}
-      {/* <Propertylist properties={properties} /> */}
-      {/* <Shopping items={data} /> */}
-      {/* <Clicker buttontext="click"  message = "heyyyy"/> */}
-      {/* <Counter /> */}
-      {/* <Toggle /> */}
-      {/* <Color Rcolor={colors}/> */}
-      <ColorBox Colors={colors} />
-    </div>
-  );
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App

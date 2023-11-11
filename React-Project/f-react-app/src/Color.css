@@ -1,9 +1,0 @@
-.Color {
-  height: 20%;
-  width: 20%;
-  /* border: 0.1px solid black;  */
-}
-
-.Color:hover {
-  cursor: pointer;
-}
