@@ -1,5 +1,78 @@
 import React from "react";
-
+import { useState, useNavigate } from "react";
 export default function Signup() {
-  return <div>Signup</div>;
+  const Navigate = useNavigate;
+
+  const [FormData, useFormData] = useState({
+    Username: "",
+    Email: "",
+    password: "",
+    cnf_pass: "",
+  });
+  const setdata = (event) => {
+    useFormData((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+    console.log(FormData);
+  };
+
+  const SubmitForm = (e) => {
+    e.preventDefault();
+    useLogged(true);
+    Navigate("/dashboard");
+  };
+  return (
+    <div>
+      <h1>Welcome</h1>
+      <h2>Lets Start!!!</h2>
+      <form onSubmit={SubmitForm}>
+        <label>
+          <p>Enter Username</p>
+          <input
+            type="text"
+            name="Username"
+            value={FormData.Username}
+            onChange={setdata}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          <p>Enter Email</p>
+          <input
+            type="email"
+            name="Email"
+            value={FormData.Email}
+            onChange={setdata}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          <p>Enter password</p>
+          <input
+            type="password"
+            name="password"
+            value={FormData.password}
+            onChange={setdata}
+            required
+          />
+        </label>
+        <br />
+        <label>
+          <p>conform password</p>
+          <input
+            type="password"
+            name="cnf_pass"
+            value={FormData.cnf_pass}
+            onChange={setdata}
+            required
+          />
+        </label>
+        <br />
+        <button>Submit</button>
+      </form>
+    </div>
+  );
 }
