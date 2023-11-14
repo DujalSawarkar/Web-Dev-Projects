@@ -1,7 +1,9 @@
 import React from "react";
-import { useState, useNavigate } from "react";
-export default function Signup() {
-  const Navigate = useNavigate;
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+export default function Signup(prop) {
+  const Navigate = useNavigate();
+  const useLogged = prop.useLogged;
 
   const [FormData, useFormData] = useState({
     Username: "",
@@ -14,7 +16,7 @@ export default function Signup() {
       ...prev,
       [event.target.name]: event.target.value,
     }));
-    console.log(FormData);
+    // console.log(FormData);
   };
 
   const SubmitForm = (e) => {

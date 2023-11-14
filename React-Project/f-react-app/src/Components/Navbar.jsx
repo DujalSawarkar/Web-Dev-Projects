@@ -4,8 +4,13 @@ import logo from "../imgs/logo.png";
 import { Link } from "react-router-dom";
 const Navbar = (props) => {
   const Loggedin = props.Loggedin;
-  const useLoggedin = props.useLoggedin;
-
+  const useLogged = props.useLogged;
+  const loggedout = (event) => {
+    event.preventDefault();
+    useLogged(false);
+    console.log("changed");
+    console.log(Loggedin);
+  };
   return (
     <div className="Nav-main">
       <Link>
@@ -37,7 +42,7 @@ const Navbar = (props) => {
         )}
         {Loggedin && (
           <Link to="/">
-            <button>Log out</button>
+            <button onClick={loggedout}>Log out</button>
           </Link>
         )}
         {Loggedin && (

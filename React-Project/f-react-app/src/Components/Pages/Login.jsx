@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 export default function Login(prop) {
   const Navigate = useNavigate();
   const useLogged = prop.useLogged;
@@ -20,8 +21,9 @@ export default function Login(prop) {
     useLogged(true);
     Navigate("/dashboard");
   };
+
   return (
-    <div>
+    <div className="loginmain">
       <h1>Welcome</h1>
       <h2>Lets Start!!!</h2>
       <form onSubmit={SubmitForm}>
