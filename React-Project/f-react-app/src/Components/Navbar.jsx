@@ -1,15 +1,15 @@
 import React from "react";
 import "./Navbar.css";
-import logo from "../imgs/logo.png";
-import { Link } from "react-router-dom";
+import logo from "./imgs/logo.png";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 const Navbar = (props) => {
+  const Navigate = useNavigate();
   const Loggedin = props.Loggedin;
   const useLogged = props.useLogged;
   const loggedout = (event) => {
     event.preventDefault();
     useLogged(false);
-    console.log("changed");
-    console.log(Loggedin);
+    Navigate("/login");
   };
   return (
     <div className="Nav-main">
@@ -21,10 +21,10 @@ const Navbar = (props) => {
           <Link to={"/"}>
             <li>Home</li>
           </Link>
-          <Link to={"#"}>
+          <Link to={"/about"}>
             <li>About</li>
           </Link>
-          <Link to={"/"}>
+          <Link to={"/contact"}>
             <li>Contact</li>
           </Link>
         </ul>

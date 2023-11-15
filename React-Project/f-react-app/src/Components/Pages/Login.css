@@ -1,7 +1,49 @@
 .loginmain {
-  height: 92vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.info {
+  border: 1px solid black;
+  background-color: rgb(243, 195, 133);
+  margin-left: 100px;
+  border-radius: 40px;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
   flex-direction: column;
 }
+.img {
+  height: 700px;
+  width: 900px;
+}
+.img-2 {
+  height: 500px;
+  width: 900px;
+}
+.info h1 {
+  font-size: 50px;
+  margin-top: 50px;
+}
+.info h2 {
+  font-size: 25px;
+}
+.info p {
+  font-size: 23px;
+}
+.info input {
+  font-size: 25px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.info button {
+  margin-left: 100px;
+  background: rgb(235, 162, 68);
+}
+.info a {
+  margin-left: 200px;
+}
+
