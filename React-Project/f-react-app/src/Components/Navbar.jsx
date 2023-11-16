@@ -32,22 +32,24 @@ const Navbar = (props) => {
       <div className="Button">
         {!Loggedin && (
           <Link to="/login">
-            <button>Log in</button>
+            <button className="Navbtn">Log in</button>
           </Link>
         )}
         {!Loggedin && (
           <Link to="/signup">
-            <button>Sign up</button>
+            <button className="Navbtn">Sign up</button>
           </Link>
         )}
         {Loggedin && (
           <Link to="/">
-            <button onClick={loggedout}>Log out</button>
+            <button className="Navbtn" onClick={loggedout}>
+              Log out
+            </button>
           </Link>
         )}
         {Loggedin && (
           <Link to="/Dashboard">
-            <button>Dashboard</button>
+            <button className="Navbtn">Dashboard</button>
           </Link>
         )}
       </div>

@@ -18,13 +18,15 @@
   font-size: 20px;
   margin: 0px 15px;
 }
-Button {
+.Button {
+  display: flex;
+  margin-right: 50px;
+  gap: 2rem;
+}
+.Navbtn {
   margin: 0px 20px;
   height: 40px;
-  width: 100px;
+  width: 100%;
   font-size: 20px;
   border-radius: 10px;
-}
-Button{
-    
 }

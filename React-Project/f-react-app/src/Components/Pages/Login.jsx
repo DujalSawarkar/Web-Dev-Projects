@@ -58,7 +58,7 @@ export default function Login(prop) {
           <a href="#">Forget Password</a>
           <br />
           <br />
-          <button>Submit</button>
+          <button className="Submitbtn">Submit</button>
         </form>
       </div>
       <div>

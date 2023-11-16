@@ -80,7 +80,7 @@ export default function Signup(prop) {
           <a href="#">Forget Password</a>
           <br />
           <br />
-          <button>Submit</button>
+          <button className="Submitbtn-2">Submit</button>
         </form>
       </div>
       <div>
