@@ -29,6 +29,9 @@ const Navbar = (props) => {
           </Link>
         </ul>
       </nav>
+      <div>   
+        {}
+      </div>
       <div className="Button">
         {!Loggedin && (
           <Link to="/login">
