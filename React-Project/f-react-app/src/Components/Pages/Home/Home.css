@@ -1,6 +1,7 @@
 .Home-main {
-    height: 90vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }

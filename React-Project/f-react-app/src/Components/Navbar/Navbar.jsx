@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import logo from "./imgs/logo.png";
+import logo from "./logo.png";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 const Navbar = (props) => {
   const Navigate = useNavigate();
@@ -29,10 +29,13 @@ const Navbar = (props) => {
           </Link>
         </ul>
       </nav>
-      <div>   
-        {}
-      </div>
+
       <div className="Button">
+        {Loggedin && (
+          <Link to="/cart">
+            <button className="Navbtn"></button>
+          </Link>
+        )}
         {!Loggedin && (
           <Link to="/login">
             <button className="Navbtn">Log in</button>

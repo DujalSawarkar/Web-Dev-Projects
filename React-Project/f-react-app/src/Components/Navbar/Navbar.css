@@ -7,13 +7,15 @@
 
 .Pages {
   list-style: none;
+  margin-left: 200px;
 }
+
 .Pages ul {
   display: flex;
 }
 
 .Pages li {
-  list-style: none;
+  color: black;
   display: flex;
   font-size: 20px;
   margin: 0px 15px;
