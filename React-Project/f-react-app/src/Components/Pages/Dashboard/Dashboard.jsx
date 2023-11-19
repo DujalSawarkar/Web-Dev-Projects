@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
-import ProductCart from "./ProductCart";
+import ProductCart from "./Product/ProductCart";
 export default function Dashboard() {
   const API_URL = "https://fakestoreapi.com/products";
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "./logo.png";
+import { RiShoppingCartFill } from "react-icons/ri";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 const Navbar = (props) => {
   const Navigate = useNavigate();
@@ -33,7 +34,7 @@ const Navbar = (props) => {
       <div className="Button">
         {Loggedin && (
           <Link to="/cart">
-            <button className="Navbtn"></button>
+            <RiShoppingCartFill className="Navcart"/>
           </Link>
         )}
         {!Loggedin && (
