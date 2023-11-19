@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import ProductCart from "./Product/ProductCart";
-export default function Dashboard() {
+import { RiShoppingCartFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
+export default function Dashboard(props) {
   const API_URL = "https://fakestoreapi.com/products";
-
   const [Post, setPost] = useState([]);
   const [Loading, setLoading] = useState();
-  async function FetchData() {
+  async function FetchData(e) {
+    // e.preventDefault();
     setLoading(true);
     try {
       const response = await fetch(API_URL);
@@ -22,8 +24,17 @@ export default function Dashboard() {
     FetchData();
   }, []);
   return (
-    <div className="Dashboard-main">
-      {Loading ? <div>loading</div> : <ProductCart Post={Post} />}
+    <div className="main">
+      <div className="Dashboard-main">
+        {Loading ? <div>loading</div> : <ProductCart Post={Post} />}
+      </div>
+      <div className="cart">
+        {
+          <Link to="/cart">
+            <RiShoppingCartFill className="Navcart" />
+          </Link>
+        }
+      </div>
     </div>
   );
 }

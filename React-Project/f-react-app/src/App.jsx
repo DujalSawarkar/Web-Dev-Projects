@@ -10,14 +10,14 @@ import Signup from "./Components/Pages/Login/Signup";
 import Cart from "./Components/Pages/Cart/Cart";
 // import PrivateRoute from "./Components/PrivateRoute";
 function App() {
-  const [Loggedin, useLogged] = useState(false);
+  const [Loggedin, useLogged] = useState(null);
   return (
     <div>
       <Navbar Loggedin={Loggedin} useLogged={useLogged} />
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard  />} />
         <Route path="/cart" element={<Cart />} />
 
         <Route path="/login" element={<Login useLogged={useLogged} />} />

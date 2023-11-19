@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import login from "../imgs/login.png";
 import "./Login.css";
 export default function Login(prop) {
+  
   const Navigate = useNavigate();
   const useLogged = prop.useLogged;
   const [FormData, useFormData] = useState({

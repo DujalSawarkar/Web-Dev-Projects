@@ -1,3 +1,5 @@
+
+
 .ProdcartMain {
   width: 80%;
   display: flex;
@@ -5,4 +7,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem 3rem;
+  /* position: relative; */
 }
+

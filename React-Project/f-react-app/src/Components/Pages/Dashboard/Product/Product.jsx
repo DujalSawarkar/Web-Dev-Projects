@@ -1,15 +1,21 @@
 import React from "react";
 import "./Product.css";
-import { useSelector , useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { add, remove } from "../../../Redux/Slice/Slice.jsx";
 const Product = (props) => {
   const { cart } = useSelector((state) => state);
   const dispatch = useDispatch();
   const info = props.e;
   const Description = info.description;
+
   const removeItem = () => {
     
+    dispatch(remove(info.id));
   };
-  const addItem = () => {};
+  const addItem = () => {
+    dispatch(add(info));
+  };
+
   return (
     <div className="ProduMain">
       <p className="title">
