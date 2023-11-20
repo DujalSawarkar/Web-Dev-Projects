@@ -27,19 +27,21 @@ const Product = (props) => {
         <img src={info.image} alt="#" />
       </div>
       <p className="description">
-        {Description.length > 60
-          ? `${Description.slice(0, 60)}..`
+        {Description.length > 50
+          ? `${Description.slice(0, 50)}..`
           : `${Description}...`}
       </p>
       <div className="btn-div">
         <h3>{`${info.price}$`}</h3>
         {cart.some((e) => e.id == info.id) ? (
-          <button onClick={removeItem}>Remove from Cart</button>
+          <button className="cartbtn" onClick={removeItem}>Remove from Cart</button>
         ) : (
-          <button onClick={addItem}>Add to Cart</button>
+          <button className="cartbtn" onClick={addItem}>Add to Cart</button>
         )}
       </div>
     </div>
+    
   );
 };
+
 export default Product;

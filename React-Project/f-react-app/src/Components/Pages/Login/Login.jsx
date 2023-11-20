@@ -63,7 +63,7 @@ export default function Login(prop) {
         </form>
       </div>
       <div>
-        <img className="img" src={login} alt="login" />
+        <img className="img-1" src={login} alt="login" />
       </div>
     </div>
   );

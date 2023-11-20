@@ -12,7 +12,7 @@
   transition: 0.5s ease-in-out;
 }
 .img-div {
-  height: 50%;
+  height: 150px;
   width: 70%;
   margin: 10px;
 }
@@ -32,10 +32,23 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  align-items: center;
+  margin-top: 30px;
 }
 .ProduMain:hover {
   cursor: pointer;
   transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+.cartbtn {
+  height: 40px;
+  width: 60%;
+  border-radius: 30%;
+  font-size: 15px;
+  font-weight: 600;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(235, 162, 68);
   transition: 0.3s ease-in-out;
 }
