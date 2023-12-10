@@ -1,17 +1,23 @@
-
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
-  background-color: #333;
-  color: white;
+  background-color: white;
+  height: 80px;
 }
 
 .logo img {
-  max-width: 100px; /* Adjust the max-width of your logo */
+  width: 200px;
+  padding: 0px 10px 0px 20px;
 }
-
+.m-div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 30px;
+}
 .nav-links {
   display: flex;
   gap: 20px;
@@ -19,23 +25,46 @@
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: black;
+  font-size: 20px;
+  padding: 10px 10px;
 }
 
 .search-bar {
   flex: 1;
-  margin: 0 20px;
+  margin: 0 30px;
+  /* height: 20px; */
+  position: relative;
 }
-
+.search-icon {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.4);
+  top: 14px;
+  left: 20px;
+  font-size: 25px;
+}
 .search-bar input {
-  width: 100%;
-  padding: 8px;
+  width: 95%;
+  color: rgba(0, 0, 0, 0.4);
+  background: rgb(228, 225, 225);
+  border-radius: 25px;
+  border: none;
+  height: 53px;
+  font-size: 18px;
+  padding-left: 50px;
 }
-
+.user-actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 13%;
+  margin-top: 7px;
+}
 .user-actions a {
   text-decoration: none;
-  color: white;
+  color: black;
   margin-left: 10px;
+  font-size: 30px;
 }
 
 /* Responsive styles */
@@ -52,4 +81,9 @@
   .search-bar {
     margin: 10px 0;
   }
+}
+.nav-links a:hover {
+  background: rgb(228, 225, 225);
+  border-radius: 30px;
+  transition: 0.4s all;
 }

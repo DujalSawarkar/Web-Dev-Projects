@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<Home />}>
           Home
         </Route>
-        <Route path="" element={<></>}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
         <Route path="" element={<></>}></Route>
         <Route path="" element={<></>}></Route>
       </Routes>
@@ -22,3 +22,4 @@ function App() {
 }
 
 export default App;
+  
