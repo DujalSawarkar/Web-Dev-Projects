@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand:wght@300&family=Roboto:ital,wght@1,100&display=swap");
+
+* {
+  font-family: "Archivo Black", sans-serif;
+  /* font-family: "Quicksand", sans-serif;   */
+  /* font-family: "Roboto", sans-serif; */
+}
+div1 {
+  position: relative;
+  width: 100%;
+}
+.main-img {
+  position: relative;
+  margin-bottom: -7px;
+}
+.main-img img {
+  width: 100%;
+}
+.Vector-img {
+  position: absolute;
+}
+.A {
+  top: 10%;
+  left: 90%;
+}
+.B {
+  width: 60px;
+  top: 43%;
+  left: 52%;
+}
+.absolute-div {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  height: 100%;
+  width: 40%;
+}
+
+.heading {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 70px;
+}
+.Sub-heading {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 30px 0px;
+}
+.Shop-btn {
+  width: 235px;
+  height: 59px;
+  border-radius: 62px;
+  background-color: black;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+.Shop-btn:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+.numbers {
+  display: flex;
+  gap: 3rem;
+}
+
+.numbers h1 {
+  font-size: 3rem;
+}
+.numbers p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.1rem;
+  line-height: 35px;
+}
+.div2 {
+  background-color: black;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+hr{
+  width: 80%;
+  margin: auto;
+}
+.div4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(228, 225, 225);
+  border: 1px solid black;
+  width: 90%;
+  margin: auto;
+  border-radius: 50px;
+}
+.div4 p {
+  /* font-family: Integral CF; */
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 58px;
+  margin: 3%;
+}
+.container {
+  display: grid;
+  gap: 3rem;
+  margin-bottom:4rem ;
+}
+
+.container div img {
+  /* border: 1px solid black; */
+  border-radius: 30px;
+}
+.img {
+  position: relative;
+}
+.img h1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.a {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+}
+.b {
+  grid-column: 2 / span 3;
+  grid-row: 1;
+}
+.c {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+}
+.c img {
+  width: 30rem;
+  height: 19rem;
+}
+.d {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(228, 225, 225);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

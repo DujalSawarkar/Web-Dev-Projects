@@ -1,0 +1,40 @@
+.div3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4rem;
+}
+.div3 h1 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 58px;
+  text-align: center;
+}
+.cloths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+}
+.Cloth-btn1 {
+  width: 218px;
+  height: 52px;
+  font-size: 1.7rem;
+  border-radius: 62px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  gap: 12px;
+  transition: 0.3s;
+}
+.Cloth-btn1:hover {
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+.price {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}

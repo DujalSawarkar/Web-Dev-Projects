@@ -20,6 +20,8 @@
 }
 .nav-links {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
@@ -42,16 +44,13 @@
   top: 14px;
   left: 20px;
   font-size: 25px;
+  z-index: 1;
 }
-.search-bar input {
+.input {
   width: 95%;
   color: rgba(0, 0, 0, 0.4);
   background: rgb(228, 225, 225);
-  border-radius: 25px;
-  border: none;
-  height: 53px;
-  font-size: 18px;
-  padding-left: 50px;
+  border-radius: 25px; 
 }
 .user-actions {
   display: flex;
@@ -66,7 +65,14 @@
   margin-left: 10px;
   font-size: 30px;
 }
-
+.nav-links a:hover {
+  border-bottom: 1px solid rgb(228, 225, 225);
+}
+.shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
@@ -81,9 +87,4 @@
   .search-bar {
     margin: 10px 0;
   }
-}
-.nav-links a:hover {
-  background: rgb(228, 225, 225);
-  border-radius: 30px;
-  transition: 0.4s all;
 }

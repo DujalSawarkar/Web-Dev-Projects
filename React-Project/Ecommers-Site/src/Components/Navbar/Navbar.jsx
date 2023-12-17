@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { HiOutlineUserCircle } from "react-icons/hi2";
-import { RiSearchLine } from "react-icons/ri";
+import { RiSearchLine, RiArrowDropDownLine } from "react-icons/ri";
+import TextField from "@mui/material/TextField";
 import "./Navbar.css";
 import logo from "../imgs/SHOP.CO.png";
 const Navbar = () => {
@@ -15,14 +16,29 @@ const Navbar = () => {
       </div>
       <div className="m-div">
         <div className="nav-links">
-          <Link to="/shop">Shop</Link>
-          <Link to="/on-sales">On Sales</Link>
-          <Link to="/new-arrivals">New Arrivals</Link>
-          <Link to="/brands">Brands</Link>
+          <div>
+            <Link to="/shop" className="shop">
+              Shop {<RiArrowDropDownLine />}
+            </Link>
+          </div>
+          <div>
+            <Link to="/on-sales">On Sales</Link>
+          </div>
+          <div>
+            <Link to="/new-arrivals">New Arrivals</Link>
+          </div>
+          <div>
+            <Link to="/brands">Brands</Link>
+          </div>
         </div>
         <div className="search-bar">
           <RiSearchLine className="search-icon" />
-          <input type="text" placeholder="Search for product..." />
+          <TextField
+            className="input"
+            id="outlined-basic"
+            label="Search For Product...."
+            variant="outlined"
+          />
         </div>
       </div>
       <div className="user-actions">
