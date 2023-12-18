@@ -5,6 +5,12 @@
   /* font-family: "Quicksand", sans-serif;   */
   /* font-family: "Roboto", sans-serif; */
 }
+/* .home-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
 div1 {
   position: relative;
   width: 100%;
@@ -86,7 +92,7 @@ div1 {
   justify-content: space-around;
   align-items: center;
 }
-hr{
+.btw-card {
   width: 80%;
   margin: auto;
 }
@@ -111,7 +117,7 @@ hr{
 .container {
   display: grid;
   gap: 3rem;
-  margin-bottom:4rem ;
+  margin-bottom: 4rem;
 }
 
 .container div img {
@@ -145,6 +151,21 @@ hr{
 .d {
   grid-column: 1 / span 2;
   grid-row: 2;
+}
+.customers-heading {
+  /* width: 100%; */
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 58px;
+  text-align: left;
+  padding: 3rem 5rem;
+}
+
+.div5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 /* width */

@@ -18,7 +18,7 @@ const Home = () => {
   const head2 = "TOP SELLINGS";
 
   return (
-    <>
+    <div className="home-main">
       {/* {console.log(Data)} */}
       <div className="div1">
         <div className="main-img">
@@ -68,7 +68,9 @@ const Home = () => {
         <img src={Calvin} alt="img" />
       </div>
       <Cards Data={Data} head={head1} />
-      <hr />
+
+      <hr className="btw-card" />
+
       <Cards Data={Data} head={head2} />
 
       <div className="div4">
@@ -92,11 +94,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      <div className="customers-heading">OUR HAPPY CUSTOMERS</div>
       <div className="div5">
         <SwiperCard />
       </div>
-    </>
+    </div>
   );
 };
 export default Home;

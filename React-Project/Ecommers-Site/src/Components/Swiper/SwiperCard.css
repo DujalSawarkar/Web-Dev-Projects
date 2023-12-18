@@ -1,18 +1,3 @@
 .image-slider {
-  width: 100%;
-  /* height: 90vh; */
-  padding-top: 10vh;
-}
-
-.content {
-  border: 2px solid black;
-  margin: auto;
-  height: 100px;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-SwiperSlide{
   width: 50%;
 }

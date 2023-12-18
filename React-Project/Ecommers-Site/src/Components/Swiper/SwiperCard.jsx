@@ -11,6 +11,7 @@ const SwiperImage = () => {
   return (
     <div className="image-slider">
       <Swiper
+        
         pagination={{
           dynamicBullets: true,
         }}
