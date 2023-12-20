@@ -6,6 +6,7 @@ import { RiSearchLine, RiArrowDropDownLine } from "react-icons/ri";
 import TextField from "@mui/material/TextField";
 import "./Navbar.css";
 import logo from "../imgs/SHOP.CO.png";
+
 const Navbar = () => {
   return (
     <div className="navbar">

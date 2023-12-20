@@ -13,7 +13,7 @@ const Cards = (props) => {
       {console.log(Data)}
       <h1>{head}</h1>
       <div className="cloths">
-        {(view ? Data : (Data.slice(0, 4))).map((data) => (
+        {(view ? Data : Data.slice(0, 4)).map((data) => (
           <Card key={data.id} data={data} />
         ))}
       </div>

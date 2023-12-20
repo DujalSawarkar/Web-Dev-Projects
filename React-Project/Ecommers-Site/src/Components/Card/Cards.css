@@ -1,4 +1,4 @@
-.div3 {
+  .div3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +14,10 @@
 .cloths {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem 5rem;
+  gap: 2rem 2rem;
   justify-content: center;
   align-items: center;
-  margin: 4rem;
+  margin: 4rem; 
 }
 .Cloth-btn1 {
   width: 218px;

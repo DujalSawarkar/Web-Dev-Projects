@@ -9,8 +9,27 @@
 
 .image {
   border-radius: 15px;
-  height: 20rem;
-  width: 19rem;
+  height: 18rem;
+  width: 16rem;
+}
+.price p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 32px; 
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+}
+.price {
+  gap: 1rem;
+}
+.price h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .discount {
   display: flex;
@@ -18,6 +37,6 @@
   align-items: center;
   background-color: rgb(253, 221, 221);
   border-radius: 20px;
-  padding: 5px;
+  padding: 0px 1rem;
   color: rgb(245, 49, 49);
 }
