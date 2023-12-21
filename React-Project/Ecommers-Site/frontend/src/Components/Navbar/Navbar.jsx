@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="m-div">
         <div className="nav-links">
           <div>
-            <Link to="/shop" className="shop">
+            <Link to="/shop" className="shop ">
               Shop {<RiArrowDropDownLine />}
             </Link>
           </div>
@@ -34,12 +34,7 @@ const Navbar = () => {
         </div>
         <div className="search-bar">
           <RiSearchLine className="search-icon" />
-          <TextField
-            className="input"
-            id="outlined-basic"
-            label="Search For Product...."
-            variant="outlined"
-          />
+    
         </div>
       </div>
       <div className="user-actions">
