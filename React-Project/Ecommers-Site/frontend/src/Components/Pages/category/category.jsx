@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Slider } from "@mui/material";
-import Casuals from "./categoryPages/casuals";
-import Formals from "./categoryPages/formals";
-import Party from "./categoryPages/party";
-import Gym from "./categoryPages/gym";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import "./category.css";
@@ -37,19 +33,25 @@ const Category = () => {
     "4X-Large",
   ];
 
-  const dressStyle = ["Casual", "Formal", "Party", "Gym"];
+  const dressStyle = ["casuals", "formals", "party", "gym"];
 
   //   let { param } = useParams();
-  const category = useLocation().pathname.slice(10);
+  const { categoryId } = useParams();
+  const navigate = useNavigate();
   //slider
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (!dressStyle.includes(categoryId)) navigate("/"); //protection of routes
+  }, [categoryId]);
+
   return (
     <div>
-      <RouteCard category={category} />
+      <RouteCard category={categoryId} />
       <div className="categoryBody">
         <div className="filterMain">
           <div className="filter-Div1">
@@ -98,13 +100,8 @@ const Category = () => {
           </div>
         </div>
         <div>
-          <div>{category}</div>
-          <div>
-            {category == "casuals" ? <Casuals /> : ""}
-            {category == "formals" ? <Formals /> : ""}
-            {category == "party" ? <Party /> : ""}
-            {category == "gym" ? <Gym /> : ""}
-          </div>
+          <div>{categoryId}</div>
+          <div></div>
         </div>
       </div>
     </div>

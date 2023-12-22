@@ -6,13 +6,14 @@ import axios from "axios";
 
 const Data = [
   {
-    id: 1,
-    img: image7,
+    imgUrl:
+      "https://res.cloudinary.com/ddtjfbyho/image/upload/v1703253228/a9rlxdtsna0jlbozmjqx.png",
     title: "T-SHIRT WITH TAPE DETAILS",
     rate: "4.5/5",
     price: "$100",
     DiscountPrice: "160",
     DiscountPercent: "20%",
+    category: "formals",
   },
   {
     id: 2,

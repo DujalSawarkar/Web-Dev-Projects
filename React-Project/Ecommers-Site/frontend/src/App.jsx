@@ -6,10 +6,6 @@ import Cart from "./Components/Pages/Cart.jsx";
 import Login from "./Components/Pages/Login.jsx";
 import { Item } from "./Components/item.jsx";
 import Category from "./Components/Pages/category/category.jsx";
-import Casuals from "./Components/Pages/category/categoryPages/casuals.jsx";
-import Formals from "./Components/Pages/category/categoryPages/formals.jsx";
-import Party from "./Components/Pages/category/categoryPages/party.jsx";
-import Gym from "./Components/Pages/category/categoryPages/gym.jsx";
 import New from "./New.jsx";
 function App() {
   const FooterData = [
@@ -56,13 +52,9 @@ function App() {
         </Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/category" element={<Category />}>
-          {/* <Route path=":casuals" element={<Casuals />}></Route>
-          <Route path=":formals" element={<Formals />}></Route>
-          <Route path=":party" element={<Party />}></Route>
-          <Route path=":gym" element={<Gym />}></Route> */}
-
-          <Route path="/category/:categoryId" element={<New />} />
+        <Route path="/create" element={<New />}></Route>
+        <Route path="/category">
+          <Route path="/category/:categoryId" element={<Category />} />
         </Route>
         {/* <Route path="/item" element={<Item />}></Route> */}
       </Routes>

@@ -12,6 +12,20 @@ const productSchema = new mongoose.Schema({
   discount: {
     type: Number,
   },
+  discountPercent: {
+    type: String,
+  },
+  rate: {
+    type: Number,
+  },
+  imageUrl: {
+    type: String,
+    required: true,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
 });
 
 export const Product = mongoose.model("Product", productSchema);
