@@ -1,0 +1,18 @@
+.categoryBody{
+    width: 95%;
+    display: flex;
+   margin: auto;
+}
+.filterMain{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    height: 50rem;
+    width: 19rem;
+    padding: 2rem;
+}
+.filter-Div1{
+    display: flex;
+}
+.filter-Div2-inner{
+    display: flex;
+}

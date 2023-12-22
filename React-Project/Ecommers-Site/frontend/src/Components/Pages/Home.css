@@ -2,7 +2,6 @@
 
 * {
   font-family: "Archivo Black", sans-serif;
-
 }
 /* .home-main{
   display: flex;
@@ -25,11 +24,12 @@ div1 {
   position: absolute;
 }
 .A {
+  width: 5rem;
   top: 10%;
   left: 90%;
 }
 .B {
-  width: 60px;
+  width: 4rem;
   top: 43%;
   left: 52%;
 }
@@ -38,7 +38,7 @@ div1 {
   top: 15%;
   left: 5%;
   height: 100%;
-  width: 40%;
+  width: 45%;
 }
 
 .heading {
@@ -55,21 +55,18 @@ div1 {
   margin: 30px 0px;
 }
 .Shop-btn {
-  width: 235px;
-  height: 59px;
+  width: 10rem;
+  height: 3.5rem;
   border-radius: 62px;
   background-color: black;
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 500;
   line-height: 22px;
-  margin-bottom: 50px;
+  margin: 0rem 0rem 3rem 0rem;
   transition: 0.3s;
 }
-.Shop-btn:hover {
-  cursor: pointer;
-  scale: 1.1;
-}
+
 .numbers {
   display: flex;
   gap: 2rem;
@@ -77,10 +74,11 @@ div1 {
 
 .numbers h1 {
   font-size: 2.5rem;
+  font-weight: 600;
 }
 .numbers p {
   color: rgba(0, 0, 0, 0.6);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 30px;
 }
 .div2 {
@@ -102,7 +100,7 @@ div1 {
   flex-direction: column;
   background-color: rgb(228, 225, 225);
   border: 1px solid black;
-  width: 90%;
+  width: 87%;
   margin: auto;
   border-radius: 50px;
 }
@@ -114,9 +112,13 @@ div1 {
   margin: 3%;
 }
 .container {
-  display: grid;
-  gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin-bottom: 4rem;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0rem 2rem; */
 }
 
 .container div img {
@@ -130,15 +132,20 @@ div1 {
   position: absolute;
   top: 10%;
   left: 10%;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0em;
+  text-align: left;
 }
-.a {
+/* .a {
   grid-column: 1 / span 1;
   grid-row: 1;
 }
 .b {
   grid-column: 2 / span 3;
   grid-row: 1;
-}
+} */
 .c {
   grid-column: 3 / span 2;
   grid-row: 2;
@@ -151,6 +158,7 @@ div1 {
   grid-column: 1 / span 2;
   grid-row: 2;
 }
+
 .customers-heading {
   /* width: 100%; */
   font-size: 48px;
@@ -160,11 +168,10 @@ div1 {
   padding: 3rem 5rem;
 }
 
-.div5{
+.div5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 /* width */

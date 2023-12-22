@@ -6,7 +6,7 @@
   background-color: white;
 }
 .logo img {
-  width: 10rem;
+  width: 13rem;
   padding: 0px 10px 0px 20px;
 }
 .m-div {
@@ -46,9 +46,11 @@
 }
 .input {
   width: 95%;
+  height: 3rem;
   color: rgba(0, 0, 0, 0.4);
   background: rgb(228, 225, 225);
   border-radius: 25px;
+  padding-left: 3rem;
 }
 .user-actions {
   display: flex;

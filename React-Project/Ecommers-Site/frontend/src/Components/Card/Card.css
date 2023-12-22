@@ -1,10 +1,11 @@
 .body {
   transition: 0.4s ease-in-out;
   margin: 1rem 0rem;
+
 }
 .body:hover {
-  transition: 0.4s ease-in-out;
-  scale: 1.1;
+  transition: 0.2s ease-in-out;
+  scale: 1.05;
 }
 
 .image {
@@ -37,6 +38,6 @@
   align-items: center;
   background-color: rgb(253, 221, 221);
   border-radius: 20px;
-  padding: 0px 1rem;
+  padding: 0px 0.8  rem;
   color: rgb(245, 49, 49);
 }

@@ -57,7 +57,7 @@ const Footer = (props) => {
           
         </div>
     
-        <hr />
+        <hr  />
         <div className="Payment-div">
           <div className="Payment-div-text">
             Shop.co © 2000-2023, All Rights Reserved

@@ -4,6 +4,8 @@
   align-items: center;
   flex-direction: column;
   margin: 4rem;
+  transition: 0.8s ease-in-out;
+
 }
 .div3 h1 {
   font-size: 48px;

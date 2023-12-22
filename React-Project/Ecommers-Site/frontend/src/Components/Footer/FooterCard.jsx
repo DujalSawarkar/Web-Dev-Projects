@@ -2,7 +2,7 @@ import React from "react";
 import "./FooterCard.css"
 const FooterCard = (props) => {
   const FooterData = props.FooterData;
-  console.log(FooterData);
+  // console.log(FooterData);
   return (
     <div className="Footer-Card-Main">
       <p>{FooterData.title}</p>

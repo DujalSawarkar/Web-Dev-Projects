@@ -12,7 +12,9 @@ import image12 from "../imgs/Cloth-img/image12.png";
 import image13 from "../imgs/Cloth-img/image13.png";
 import image14 from "../imgs/Cloth-img/image14.png";
 import SwiperCard from "../Swiper/SwiperCard.jsx";
+import { Link } from "react-router-dom";
 import "./Home.css";
+
 const Home = () => {
   const head1 = "NEW ARRIVALS";
   const head2 = "TOP SELLINGS";
@@ -77,20 +79,28 @@ const Home = () => {
         <p>BROWSE BY DRESS STYLE</p>
         <div className="container">
           <div className=" img a">
-            <h1>Casual</h1>
-            <img src={image11} alt="" />
+            <Link to={"/category/casuals"}>
+              <h1>Casual</h1>
+              <img src={image11} alt="" />
+            </Link>
           </div>
           <div className=" img b">
-            <h1>Formal</h1>
-            <img src={image13} alt="" />
-          </div>
-          <div className=" img c">
-            <h1>Gym</h1>
-            <img src={image14} alt="" />
+            <Link to={"/category/formals"}>
+              <h1>Formal</h1>
+              <img src={image13} alt="" />
+            </Link>
           </div>
           <div className=" img d">
-            <h1>Party</h1>
-            <img src={image12} alt="" />
+            <Link to={"/category/party"}>
+              <h1>Party</h1>
+              <img src={image12} alt="" />
+            </Link>
+          </div>
+          <div className=" img c">
+            <Link to={"/category/gym"}>
+              <h1>Gym</h1>
+              <img src={image14} alt="" />
+            </Link>
           </div>
         </div>
       </div>

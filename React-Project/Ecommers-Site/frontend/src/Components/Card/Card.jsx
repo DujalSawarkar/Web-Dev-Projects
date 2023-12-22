@@ -9,7 +9,7 @@ const Card = (props) => {
       <p>{data.rate}</p>
       <div className="price">
         <h2>{data.price}</h2>
-        <p>{data.DiscountPrice}</p>
+        <p>{data.DiscountPrice == "Null" ? "" : data.DiscountPrice}</p>
         <div className="discount">{data.DiscountPercent}</div>
       </div>
     </div>
