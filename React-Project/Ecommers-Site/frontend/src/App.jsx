@@ -4,10 +4,19 @@ import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import Cart from "./Components/Pages/Cart.jsx";
 import Login from "./Components/Pages/Login.jsx";
-import { Item } from "./Components/item.jsx";
+// import { Item } from "./Components/item.jsx";
 import Category from "./Components/Pages/category/category.jsx";
 import New from "./New.jsx";
+
 function App() {
+
+
+  // useEffect(async () => {
+  //   const res = await getdata();
+  //   console.log(res);
+  //   setdata(res);
+  // }, []);
+
   const FooterData = [
     {
       id: "1",
@@ -53,10 +62,10 @@ function App() {
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/create" element={<New />}></Route>
+        {/* <Route path="/find" element={<Item />}></Route> */}
         <Route path="/category">
           <Route path="/category/:categoryId" element={<Category />} />
         </Route>
-        {/* <Route path="/item" element={<Item />}></Route> */}
       </Routes>
       <Footer FooterData={FooterData} />
     </div>

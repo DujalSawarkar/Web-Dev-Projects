@@ -17,7 +17,21 @@ export const getItem = async (req, res) => {
 export const findItem = async (req, res) => {
   try {
     const product = await Product.find();
+    console.log(product);
     return res.json(product);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const findItemCategory = async (req, res) => {
+  const { categoryId } = req.params;
+
+  try {
+    const product = await Product.find({ category: categoryId });
+    console.log(product);
+    return res.json(product);
+    
   } catch (error) {
     console.log(error);
   }

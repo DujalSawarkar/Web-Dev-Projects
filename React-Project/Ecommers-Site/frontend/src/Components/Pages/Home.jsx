@@ -5,23 +5,35 @@ import Zara from "../imgs/Zara.png";
 import gucci from "../imgs/gucci.png";
 import prada from "../imgs/prada.png";
 import Calvin from "../imgs/Calvin.png";
-import Data from "../../Data.js";
+// import Data from "../../Data.js";
 import Cards from "../Card/Cards.jsx";
 import image11 from "../imgs/Cloth-img/image11.png";
 import image12 from "../imgs/Cloth-img/image12.png";
 import image13 from "../imgs/Cloth-img/image13.png";
 import image14 from "../imgs/Cloth-img/image14.png";
 import SwiperCard from "../Swiper/SwiperCard.jsx";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Home.css";
+import { useEffect, useState } from "react";
+import getdata from "../../Data.js";
+
+// import axios from "axios";
 
 const Home = () => {
+  const [Data, setData] = useState([]);
+
+  useEffect(() => {
+    getdata().then((data) => {
+      setData(data);
+    });
+  }, []);
+
   const head1 = "NEW ARRIVALS";
   const head2 = "TOP SELLINGS";
 
   return (
     <div className="home-main">
-      {/* {console.log(Data)} */}
+      {console.log(Data)}
       <div className="div1">
         <div className="main-img">
           <div>
@@ -69,11 +81,18 @@ const Home = () => {
         <img src={prada} alt="img" />
         <img src={Calvin} alt="img" />
       </div>
-      <Cards Data={Data} head={head1} />
-
+      {Data == null ? (
+        <div>loading</div>
+      ) : (
+        <Cards Data={Data} head={head1} key={1} />
+      )}
       <hr className="btw-card" />
 
-      <Cards Data={Data} head={head2} />
+      {Data == null ? (
+        <div>loading</div>
+      ) : (
+        <Cards Data={Data} head={head2} key={2} />
+      )}
 
       <div className="div4">
         <p>BROWSE BY DRESS STYLE</p>

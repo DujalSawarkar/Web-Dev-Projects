@@ -4,7 +4,7 @@ const Card = (props) => {
   const data = props.data;
   return (
     <div className="body">
-      <img src={data.img} alt="#" className="image" />
+      <img src={data.imageUrl} alt="#" className="image" />
       <h3>{data.title}</h3>
       <p>{data.rate}</p>
       <div className="price">

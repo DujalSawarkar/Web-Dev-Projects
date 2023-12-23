@@ -127,6 +127,12 @@ div1 {
 }
 .img {
   position: relative;
+  transition: 0.2s;
+}
+.img:hover {
+  /* position: relative; */
+  scale: 1.01;
+  transition: 0.2s;
 }
 .img h1 {
   position: absolute;
