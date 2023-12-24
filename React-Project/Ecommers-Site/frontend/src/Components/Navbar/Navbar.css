@@ -4,6 +4,7 @@
   align-items: center;
   padding: 1rem;
   background-color: white;
+  height: 11vh;
 }
 .logo img {
   width: 13rem;
@@ -77,7 +78,6 @@
 .MuiOutlinedInput-notchedOutline {
   display: none;
 }
-
 
 /* Responsive styles */
 @media (max-width: 768px) {

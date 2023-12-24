@@ -8,9 +8,17 @@ const Card = (props) => {
       <h3>{data.title}</h3>
       <p>{data.rate}</p>
       <div className="price">
-        <h2>{data.price}</h2>
-        <p>{data.DiscountPrice == "Null" ? "" : data.DiscountPrice}</p>
-        <div className="discount">{data.DiscountPercent}</div>
+        {data.discount ? (
+          <>
+            <h2 className="originalPrice">{data.discount}</h2>
+            <p className="disPrice">{data.price}</p>
+            <div className="discount">{`${data.discountPercent}%`}</div>
+          </>
+        ) : (
+          <h2 className="originalPrice">{data.price}</h2>
+        )}
+
+        
       </div>
     </div>
   );

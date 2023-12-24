@@ -31,7 +31,6 @@ export const findItemCategory = async (req, res) => {
     const product = await Product.find({ category: categoryId });
     console.log(product);
     return res.json(product);
-    
   } catch (error) {
     console.log(error);
   }
@@ -40,8 +39,16 @@ export const findItemCategory = async (req, res) => {
 export const insertDoc = async (req, res) => {
   console.log(req.body);
 
-  const { title, price, discount, discountPercent, rate, imageUrl, category } =
-    req.body;
+  const {
+    title,
+    price,
+    discount,
+    discountPercent,
+    rate,
+    imageUrl,
+    category,
+    item_type,
+  } = req.body;
 
   try {
     const insertedProd = await Product.create({
@@ -52,6 +59,7 @@ export const insertDoc = async (req, res) => {
       rate,
       imageUrl,
       category,
+      item_type,
     });
 
     return res.json(insertedProd);

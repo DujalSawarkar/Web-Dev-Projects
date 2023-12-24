@@ -36,7 +36,7 @@ const Home = () => {
       {console.log(Data)}
       <div className="div1">
         <div className="main-img">
-          <div>
+          <div className="main-img-inner">
             <img src={Rectangle2} alt="#" />
             <div className="absolute-div">
               <div className="heading">

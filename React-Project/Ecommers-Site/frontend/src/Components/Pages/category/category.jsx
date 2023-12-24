@@ -62,31 +62,12 @@ const Category = () => {
   }, []);
 
   const [filterHide, setfilterHide] = useState(true);
-
-  const filterHidechange = () => {
-    console.log(filterHide);
-    setfilterHide((prev) => !prev);
-  };
-
   const [price, setprice] = useState(true);
-  const priceHidechange = () => {
-    console.log(price);
-    setprice((prev) => !prev);
-  };
   const [Color, setColor] = useState(true);
-  const ColorHidechange = () => {
-    console.log(Color);
-    setColor((prev) => !prev);
-  };
   const [Size, setSize] = useState(true);
-  const SizeHidechange = () => {
-    console.log(Size);
-    setSize((prev) => !prev);
-  };
   const [Style, setStyle] = useState(true);
-  const StyleHidechange = () => {
-    console.log(Style);
-    setStyle((prev) => !prev);
+  const changeHandler = (state, setstate) => {
+    setstate((prev) => !prev);
   };
 
   return (
@@ -98,7 +79,7 @@ const Category = () => {
             <h1>Filters</h1>
             <HiOutlineAdjustmentsVertical
               className="filter-icon"
-              onClick={filterHidechange}
+              onClick={() => changeHandler(filterHide, setfilterHide)}
             />
           </div>
           {filterHide && (
@@ -118,7 +99,7 @@ const Category = () => {
                   <h1>Price</h1>
                   <IoIosArrowUp
                     className="IoIosArrowUp"
-                    onClick={priceHidechange}
+                    onClick={() => changeHandler(price, setprice)}
                   />
                 </div>
                 {price && (
@@ -137,7 +118,7 @@ const Category = () => {
                 <h1>Colors</h1>
                 <IoIosArrowUp
                   className="IoIosArrowUp"
-                  onClick={ColorHidechange}
+                  onClick={() => changeHandler(color, setColor)}
                 />
               </div>
 
@@ -154,7 +135,7 @@ const Category = () => {
                 <h1>Size</h1>
                 <IoIosArrowUp
                   className="IoIosArrowUp"
-                  onClick={SizeHidechange}
+                  onClick={() => changeHandler(Size, setSize)}
                 />
               </div>
               {Size && (
@@ -169,7 +150,7 @@ const Category = () => {
                 <h1>Dress Style</h1>
                 <IoIosArrowUp
                   className="IoIosArrowUp"
-                  onClick={StyleHidechange}
+                  onClick={() => changeHandler(Style, setStyle)}
                 />
               </div>
               {Style && (

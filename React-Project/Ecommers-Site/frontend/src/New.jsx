@@ -11,6 +11,12 @@ const New = () => {
   };
 
   const onSubmit = async (e) => {
+    if (data.discount === null && !data.discountPercent) {
+      const { discount, discountPercent, ...rest } = data;
+
+      setdata(rest);
+    }
+
     e.preventDefault();
     const result = await axios.post("http://localhost:3000/items/create", {
       ...data,
@@ -70,6 +76,13 @@ const New = () => {
           onChange={onChange}
           name="category"
           placeholder="category"
+          type="text"
+        />
+        <input
+          className="p-5 bg-slate-500/5"
+          onChange={onChange}
+          name="item_type"
+          placeholder="Item Type"
           type="text"
         />
         <button type="submit">Submit</button>

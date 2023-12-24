@@ -1,7 +1,6 @@
 .body {
   transition: 0.4s ease-in-out;
   margin: 1rem 0rem;
-
 }
 .body:hover {
   transition: 0.2s ease-in-out;
@@ -13,10 +12,10 @@
   height: 18rem;
   width: 16rem;
 }
-.price p {
+.disPrice {
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 32px; 
+  line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
   text-decoration: line-through;
@@ -25,7 +24,7 @@
 .price {
   gap: 1rem;
 }
-.price h2 {
+.originalPrice {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 32px;
@@ -38,6 +37,6 @@
   align-items: center;
   background-color: rgb(253, 221, 221);
   border-radius: 20px;
-  padding: 0px 0.8  rem;
+  padding: 0px 0.8 rem;
   color: rgb(245, 49, 49);
 }

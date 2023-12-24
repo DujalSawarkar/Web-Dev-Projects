@@ -111,6 +111,12 @@
   letter-spacing: 0em;
   text-align: left;
   color: rgba(0, 0, 0, 0.6);
+  transition: 0.2s;
+}
+.Size:hover {
+  background: #000;
+  color: white;
+  transition: 0.2s;
 }
 .category-main {
   /* width: 50rem; */
