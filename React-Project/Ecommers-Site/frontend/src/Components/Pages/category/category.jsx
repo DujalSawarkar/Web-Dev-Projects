@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import {
+  useLocation,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import { Slider } from "@mui/material";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
@@ -9,12 +14,12 @@ import RouteCard from "../../routeCard/routeCard";
 import axios from "axios";
 import Card from "../../Card/Card";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import styled from "@emotion/styled";
+import UsePagination from "../../pagination/usePagination";
 // import Card from "../../Card/Cards";
 
 const Category = () => {
   const [catData, setCatData] = useState([]);
-  const cloths = ["T-Shirt ", "Short", "Shirt", "Hoodie", "Jeans"];
+  const cloths = ["T-Shirt", "shorts", "shirt", "hoodie", "jeans"];
   const color = [
     "bg-blue-500",
     "bg-green-500",
@@ -44,12 +49,22 @@ const Category = () => {
   //   let { param } = useParams();
   const { categoryId } = useParams();
   const navigate = useNavigate();
-  //slider
 
-  const getItemByCategory = async (categoryId) => {
-    const { data } = await axios.get(
-      `http://localhost:3000/items/find/${categoryId}`
-    );
+  const [searchParam, setsearchParam] = useSearchParams();
+  const item_type = searchParam.get("item_type");
+  // console.log(item_type);
+
+  const changeitem = (props) => {
+    const type = props;
+    setsearchParam({ item_type: type });
+  };
+
+  const getItemByCategory = async (categoryId, item_type) => {
+    const URL = item_type
+      ? `http://localhost:3000/items/find/${categoryId}?item_type=${item_type}`
+      : `http://localhost:3000/items/find/${categoryId} `;
+
+    const { data } = await axios.get(URL);
 
     console.log(data);
     setCatData(data);
@@ -58,8 +73,8 @@ const Category = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     if (!dressStyle.includes(categoryId)) navigate("/"); //protection of routes
-    getItemByCategory(categoryId);
-  }, []);
+    getItemByCategory(categoryId, item_type);
+  }, [item_type]);
 
   const [filterHide, setfilterHide] = useState(true);
   const [price, setprice] = useState(true);
@@ -89,7 +104,12 @@ const Category = () => {
                 {cloths.map((e) => (
                   <div className="filter-Div2-inner">
                     <h1>{e}</h1>
-                    <IoIosArrowForward className="routeIcon" />
+                    <IoIosArrowForward
+                      className="routeIcon"
+                      onClick={() => {
+                        changeitem(e);
+                      }}
+                    />
                   </div>
                 ))}
               </div>
@@ -183,17 +203,28 @@ const Category = () => {
           <div className="category-main-div1">
             <h1>{categoryId}</h1>
             <div className="sortFilter">
-              <p>Showing 1-10 of 100 Products Sort by:</p>
-              <h5>Most Popular</h5>
+              <p> Sort by : </p>
+              <h5> Most Popular</h5>
               {<RiArrowDropDownLine />}
             </div>
           </div>
           <div className="category-card-div">
-            {catData.map((item) => (
-              <Card key={item._id} data={item} />
-            ))}
+            {catData.length == 0 ? (
+              <center>No Data Found</center>
+            ) : (
+              <>
+                {catData.map((item) => (
+                  <Card key={item._id} data={item} />
+                ))}
+              </>
+            )}
           </div>
         </div>
+      </div>
+
+      <div className="pagination">
+        <hr />
+        <UsePagination />
       </div>
     </div>
   );

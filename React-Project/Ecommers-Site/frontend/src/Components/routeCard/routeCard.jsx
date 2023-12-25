@@ -10,7 +10,9 @@ const RouteCard = (props) => {
         <div className="homeText">Home </div>
       </Link>
       <IoIosArrowForward className="routeIcon" />
-      <div className="routecategory">{category}</div>
+      <Link to={`/category/${category}`}>
+        <div className="routecategory">{category}</div>
+      </Link>
     </div>
   );
 };

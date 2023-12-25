@@ -1,7 +1,7 @@
 import { Product } from "../model/product.model.js";
 
 export const getItem = async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
 
   try {
     // const product = await Product.create({
@@ -17,7 +17,7 @@ export const getItem = async (req, res) => {
 export const findItem = async (req, res) => {
   try {
     const product = await Product.find();
-    console.log(product);
+    // console.log(product);
     return res.json(product);
   } catch (error) {
     console.log(error);
@@ -26,18 +26,39 @@ export const findItem = async (req, res) => {
 
 export const findItemCategory = async (req, res) => {
   const { categoryId } = req.params;
+  const { item_type } = req.query;
+  console.log(item_type);
 
-  try {
-    const product = await Product.find({ category: categoryId });
-    console.log(product);
-    return res.json(product);
-  } catch (error) {
-    console.log(error);
+  if (item_type == null) {
+    try {
+      const product = await Product.find({
+        category: categoryId,
+      });
+
+      console.log(product);
+
+      return res.json(product);
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    try {
+      const product = await Product.find({
+        category: categoryId,
+        item_type: item_type,
+      });
+
+      console.log(product);
+
+      return res.json(product);
+    } catch (error) {
+      console.log(error);
+    }
   }
 };
 
 export const insertDoc = async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
 
   const {
     title,

@@ -3,17 +3,28 @@
   margin: 1rem 0rem;
 }
 .body:hover {
+  cursor: pointer;
   transition: 0.2s ease-in-out;
   scale: 1.05;
 }
+.body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
 
+}
 .image {
   border-radius: 15px;
   height: 18rem;
   width: 16rem;
+  background: rgba(240, 238, 237, 1);
+  margin: 0.5rem 0rem;
 }
 .disPrice {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 32px;
   letter-spacing: 0em;
@@ -21,11 +32,25 @@
   text-decoration: line-through;
   color: rgba(0, 0, 0, 0.4);
 }
+.star-rate-div {
+  /* gap: 1rem; */
+  display: flex;
+  align-items: center;
+}
+.star-rate-div img {
+  width: 18.49px;
+  height: 18.49px;
+ margin: 0.5rem 0.1rem 0.5rem 0rem;
+}
+.star-rate-div p {
+  margin-left: 5px;
+  padding-top: 5px;
+}
 .price {
   gap: 1rem;
 }
 .originalPrice {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 32px;
   letter-spacing: 0em;
@@ -37,6 +62,6 @@
   align-items: center;
   background-color: rgb(253, 221, 221);
   border-radius: 20px;
-  padding: 0px 0.8 rem;
+  padding:0rem 0.8rem ;
   color: rgb(245, 49, 49);
 }

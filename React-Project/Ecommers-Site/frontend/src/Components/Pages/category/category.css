@@ -10,6 +10,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   padding: 2rem;
+  height: fit-content;
 }
 .filterMain2 {
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -30,8 +31,12 @@
   /* padding: 1rem; */
   height: 17px;
   width: 17 px;
+  transition: 0.2s;
 }
 .IoIosArrowUp:hover {
+  transition: 0.2s;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
   /* border: 1px solid black; */
   border-radius: 50%;
@@ -73,6 +78,17 @@
   color: rgba(0, 0, 0, 0.6);
 }
 
+.routeIcon {
+  transition: 0.2s;
+}
+.routeIcon:hover {
+  transition: 0.2s;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  background: rgba(240, 240, 240, 1);
+  border-radius: 100%;
+}
 .Slider {
   margin: 1rem 0rem;
   color: black;
@@ -123,7 +139,7 @@
   gap: 2rem;
 }
 .category-main-div1 {
-  width: 100%;
+  width: 70vw;
   display: flex;
   justify-content: space-between;
 }
@@ -146,4 +162,14 @@
   justify-content: center;
   align-items: center;
   /* gap: 1rem; */
+}
+.pagination {
+  margin-left: 15rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.pagination hr {
+  width: 68vw;
+  margin-left: 10rem;
 }

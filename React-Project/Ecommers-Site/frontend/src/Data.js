@@ -1,7 +1,4 @@
-import image7 from "../src/Components/imgs/Cloth-img/image7.png";
-import image8 from "../src/Components/imgs/Cloth-img/image8.png";
-import image9 from "../src/Components/imgs/Cloth-img/image9.png";
-import image10 from "../src/Components/imgs/Cloth-img/image10.png";
+
 import axios from "axios";
 
 // const Data = [
