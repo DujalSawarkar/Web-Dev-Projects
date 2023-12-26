@@ -13,6 +13,10 @@ const RouteCard = (props) => {
       <Link to={`/category/${category}`}>
         <div className="routecategory">{category}</div>
       </Link>
+      {/* <IoIosArrowForward className="routeIcon" />
+      <Link to={`/category/${category}`}>
+        <div className="routecategory">{category}</div>
+      </Link> */}
     </div>
   );
 };

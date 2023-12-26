@@ -1,14 +1,16 @@
 import { Product } from "../model/product.model.js";
 
 export const getItem = async (req, res) => {
-  // console.log(req.body);
+  const { itemId } = req.params;
+  console.log(itemId);
 
+  // res.send({ itemId });
   try {
-    // const product = await Product.create({
-    //   title: "Dujal",
-    //   price: 500,
-    // });
-    // return res.json(product);
+    const product = await Product.findById({
+      _id: itemId,
+    });
+    console.log(product);
+    return res.json(product);
   } catch (err) {
     console.log(err);
   }
@@ -27,7 +29,7 @@ export const findItem = async (req, res) => {
 export const findItemCategory = async (req, res) => {
   const { categoryId } = req.params;
   const { item_type } = req.query;
-  console.log(item_type);
+  console.log(categoryId);
 
   if (item_type == null) {
     try {
@@ -35,7 +37,7 @@ export const findItemCategory = async (req, res) => {
         category: categoryId,
       });
 
-      console.log(product);
+      // console.log(product);
 
       return res.json(product);
     } catch (error) {

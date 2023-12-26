@@ -12,4 +12,6 @@ item.get("/find/:categoryId", findItemCategory);
 item.get("/", findItem);
 item.post("/create", insertDoc);
 
+item.get("/:itemId", getItem);
+
 export default item;
