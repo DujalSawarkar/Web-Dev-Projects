@@ -61,7 +61,7 @@ function App() {
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/create" element={<New />}></Route>
-        <Route path="/:itemId" element={<Item />}></Route>
+        <Route path="/:itemtype" element={<Item />}></Route>
         <Route path="/category">
           <Route path="/category/:categoryId" element={<Category />} />
         </Route>

@@ -1,11 +1,10 @@
-  .div3 {
+.div3 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 4rem;
   transition: 0.8s ease-in-out;
-
 }
 .div3 h1 {
   font-size: 48px;
@@ -16,10 +15,10 @@
 .cloths {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem 2rem;
+  gap: 1rem 1rem;
   justify-content: center;
   align-items: center;
-  margin: 4rem; 
+  margin: 2rem;
 }
 .Cloth-btn1 {
   width: 218px;

@@ -1,19 +1,31 @@
 import { Product } from "../model/product.model.js";
 
 export const getItem = async (req, res) => {
-  const { itemId } = req.params;
-  console.log(itemId);
+  const { itemtype } = req.params;
+  const { id } = req.query;
+  console.log(itemtype, id);
 
   // res.send({ itemId });
   try {
     const product = await Product.findById({
-      _id: itemId,
+      _id: id,
     });
-    console.log(product);
-    return res.json(product);
+    const producttype = await Product.find({
+      item_type: itemtype,
+    });
+    let products = [];
+    products.push(product);
+    products.push(producttype);
+
+    return res.json(products);
   } catch (err) {
     console.log(err);
   }
+  // try {
+  //   return res.json(producttype);
+  // } catch (err) {
+  //   console.log(err);
+  // }
 };
 
 export const findItem = async (req, res) => {
@@ -29,7 +41,7 @@ export const findItem = async (req, res) => {
 export const findItemCategory = async (req, res) => {
   const { categoryId } = req.params;
   const { item_type } = req.query;
-  console.log(categoryId);
+  // console.log(categoryId);
 
   if (item_type == null) {
     try {
