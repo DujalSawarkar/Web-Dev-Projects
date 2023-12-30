@@ -162,7 +162,8 @@
   height: 46px;
   margin-bottom: 1rem;
 }
-.Size-inner:hover {
+.Size-inner:hover, 
+.sizeclicked{
   background: #000;
   color: white;
   transition: 0.2s;
@@ -198,7 +199,7 @@
   color: white;
 }
 .item-detail-main-card {
-  margin-top: 10rem;
+  margin-top: 5rem;
   /* margin-left: 5rem; */
   /* width: 120%; */
   display: flex;
@@ -236,7 +237,7 @@
   line-height: 22px;
   letter-spacing: 0em;
   text-align: center;
-
+  transition: 0.3s;
   padding: 1rem;
   width: 100%;
   height: 100%;
@@ -245,4 +246,5 @@
 .Rating-raviews-btn button:hover,
 .Rating-raviews-btn button.active {
   border-bottom: 1px solid black;
+  transition: 0.7s;
 }

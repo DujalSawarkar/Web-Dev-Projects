@@ -3,56 +3,89 @@ import React, { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import RouteCard from "../routeCard/routeCard";
 import star from "../imgs/PaymentImg/star.png";
+import ProductInfo from "./item-components/productinfi.jsx";
+import RatingReview from "./item-components/ratingreview.jsx";
+import FAQ from "./item-components/faq.jsx";
 import "./item.css";
 import Card from "../Card/Card";
 import Data2 from "../../Data2";
+import { Store } from "../Redux/Store.jsx";
 export const Item = () => {
   const { itemtype } = useParams();
-
-  console.log(itemtype);
+  // console.log(Store.reducer.Cart);
+  // console.log(itemtype);
   const [itemData, setItemData] = useState([]);
   const [ratingComp, setRatingComp] = useState([
     {
       name: "Product Details",
-      isActive: true,
+      isActive: false,
     },
     {
       name: "Rating & Reviews",
-      isActive: false,
+      isActive: true,
     },
     {
       name: "FAQs",
       isActive: false,
     },
   ]);
+  const [Sizebtn, setSizebtn] = useState([
+    {
+      name: "Small",
+      isActive: false,
+    },
+    {
+      name: "Medium",
+      isActive: true,
+    },
+    {
+      name: "Large",
+      isActive: false,
+    },
+    {
+      name: "X-Large",
+      isActive: false,
+    },
+  ]);
 
   const [searchParam, setsearchParam] = useSearchParams();
   const id = searchParam.get("id");
-  console.log(id);
-  const itemDatabyID = async (itemtype, id) => {
-    console.log("inside api call");
+  const [divArray, setDivArray] = useState([]);
+  // console.log(id);
 
-    const { data } = await axios.get(
-      `http://localhost:3000/items/${itemtype}?id=${id}`
-    );
-    console.log("inside api call");
-    setItemData(data);
+  const makeaArray = (arraySize) => {
+    let arr = [];
+
+    for (let i = 0; i < arraySize; i++) {
+      arr.push(i);
+    }
+
+    return arr;
+  };
+
+  const itemDatabyID = async (itemtype, id) => {
+    // console.log("inside api call");
+
+    axios
+      .get(`http://localhost:3000/items/${itemtype}?id=${id}`)
+      .then((res) => {
+        setItemData(res.data);
+        setDivArray(() => makeaArray(res.data[0].rate));
+      });
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
     itemDatabyID(itemtype, id);
   }, [id]);
 
-  // console.log(itemData);
-
-  const divArray = Array.from({ length: itemData.rate }, (_, index) => index);
-
-  const clickHandler = (index) => {
-    const updatedRatingComp = ratingComp.map((item, i) => ({
+  // console.log(itemData[0]);
+  const clickHandler = (index, setfun, fun) => {
+    const updatedRatingComp = fun.map((item, i) => ({
       ...item,
       isActive: i === index,
     }));
 
-    setRatingComp(updatedRatingComp);
+    setfun(updatedRatingComp);
   };
 
   return itemData.length == 0 ? (
@@ -82,7 +115,7 @@ export const Item = () => {
           <h1 className="">{itemData[0].title}</h1>
           <div className="item-detail-div2-star">
             {divArray.map((e) => (
-              <img src={star} alt="" />
+              <img src={star} alt={e} />
             ))}
             <p>{`${itemData[0].rate}.0/5`}</p>
           </div>
@@ -111,10 +144,19 @@ export const Item = () => {
           <hr />
           <p className="size-h">Choose Size</p>
           <div className="size-maindiv">
-            <button className="Size-inner">Small</button>
-            <button className="Size-inner">Medium</button>
-            <button className="Size-inner">Large</button>
-            <button className="Size-inner">X-Large</button>
+            {Sizebtn.map((size, index) => (
+              <>
+                <button
+                  onClick={() => clickHandler(index, setSizebtn, Sizebtn)}
+                  key={index}
+                  className={`${
+                    size.isActive ? "Size-inner sizeclicked" : "Size-inner"
+                  }`}
+                >
+                  {size.name}
+                </button>
+              </>
+            ))}
           </div>
           <hr />
           <div className="btn-div">
@@ -131,16 +173,21 @@ export const Item = () => {
       <div className="Rating-raviews">
         <div className="Rating-raviews-btn">
           {ratingComp.map((rate, index) => (
-            <button
-              onClick={() => clickHandler(index)}
-              key={index}
-              className={`${rate.isActive ? "active" : ""}`}
-            >
-              {rate.name}
-            </button>
+            <>
+              <button
+                onClick={() => clickHandler(index, setRatingComp, ratingComp)}
+                key={index}
+                className={`${rate.isActive ? "active" : ""}`}
+              >
+                {rate.name}
+              </button>
+            </>
           ))}
         </div>
-        <div></div>
+
+        <div>{ratingComp[0].isActive == true ? <ProductInfo /> : ""}</div>
+        <div>{ratingComp[1].isActive == true ? <RatingReview /> : ""}</div>
+        <div>{ratingComp[2].isActive == true ? <FAQ /> : ""}</div>
       </div>
 
       <div className="item-detail-main-card">
