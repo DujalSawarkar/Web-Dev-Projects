@@ -7,13 +7,19 @@ import ProductInfo from "./item-components/productinfi.jsx";
 import RatingReview from "./item-components/ratingreview.jsx";
 import FAQ from "./item-components/faq.jsx";
 import "./item.css";
+import { useDispatch, useSelector } from "react-redux";
+import { increment, decrement } from "../Redux/Slice/CounterSlice.jsx";
+import { add, remove } from "../Redux/Slice/CartSlice.jsx";
 import Card from "../Card/Card";
 import Data2 from "../../Data2";
 import { Store } from "../Redux/Store.jsx";
 export const Item = () => {
   const { itemtype } = useParams();
-  // console.log(Store.reducer.Cart);
-  // console.log(itemtype);
+  const count = useSelector((state) => state.Counter);
+  const dispatch = useDispatch();
+  const { Cart } = useSelector((state) => state);
+  // console.log(count);
+  console.log(Cart);
   const [itemData, setItemData] = useState([]);
   const [ratingComp, setRatingComp] = useState([
     {
@@ -78,7 +84,7 @@ export const Item = () => {
     itemDatabyID(itemtype, id);
   }, [id]);
 
-  // console.log(itemData[0]);
+  console.log(itemData[0]);
   const clickHandler = (index, setfun, fun) => {
     const updatedRatingComp = fun.map((item, i) => ({
       ...item,
@@ -161,11 +167,28 @@ export const Item = () => {
           <hr />
           <div className="btn-div">
             <div className="btn-div-inner">
-              <button>-</button>
-              <p>1</p>
-              <button>+</button>
+              <button onClick={() => dispatch(decrement())}>-</button>
+              <p>{count < 0 ? 0 : count}</p>
+              <button onClick={() => dispatch(increment())}>+</button>
             </div>
-            <button className="addtocart-btn">Add to Cart</button>
+
+            {Cart == undefined ? (
+              <button className="addtocart-btn">Add to Cart</button>
+            ) : Cart.some((e) => e.id == itemData.id) ? (
+              <button
+                className="addtocart-btn"
+                onClick={() => dispatch(remove(id))}
+              >
+                Remove from Cart
+              </button>
+            ) : (
+              <button
+                className="addtocart-btn"
+                onClick={() => dispatch(add(itemData[0]))}
+              >
+                Add to Cart
+              </button>
+            )}
           </div>
         </div>
       </div>
