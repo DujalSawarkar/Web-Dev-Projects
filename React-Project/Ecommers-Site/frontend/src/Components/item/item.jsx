@@ -143,9 +143,9 @@ export const Item = () => {
           <hr />
           <p className="color-h">Select Colors</p>
           <div className="color">
-            <div className="color-inner"></div>
-            <div className="color-inner"></div>
-            <div className="color-inner"></div>
+            <div className="color-inner bg-[#7b7bbd]"></div>
+            <div className="color-inner bg-[#bd7b7b]"></div>
+            <div className="color-inner bg-[#7bbd7e]"></div>
           </div>
           <hr />
           <p className="size-h">Choose Size</p>

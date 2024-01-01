@@ -131,6 +131,10 @@
   width: 37px;
   height: 37px;
 }
+
+.color-inner:hover {
+  cursor: pointer;
+}
 .size-h {
   font-size: 16px;
   font-weight: 400;
@@ -162,8 +166,8 @@
   height: 46px;
   margin-bottom: 1rem;
 }
-.Size-inner:hover, 
-.sizeclicked{
+.Size-inner:hover,
+.sizeclicked {
   background: #000;
   color: white;
   transition: 0.2s;
