@@ -3,13 +3,15 @@ import { Product } from "../model/product.model.js";
 export const getItem = async (req, res) => {
   const { itemtype } = req.params;
   const { id } = req.query;
-  console.log(itemtype, id);
+  // console.log(itemtype, id);
 
   // res.send({ itemId });
   try {
-    const product = await Product.findById({
+    const product = await Product.find({
       _id: id,
     });
+
+
     const producttype = await Product.find({
       item_type: itemtype,
     });
@@ -62,7 +64,7 @@ export const findItemCategory = async (req, res) => {
         item_type: item_type,
       });
 
-      console.log(product);
+      // console.log(product);
 
       return res.json(product);
     } catch (error) {

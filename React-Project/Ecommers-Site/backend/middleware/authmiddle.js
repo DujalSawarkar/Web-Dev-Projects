@@ -1,12 +1,12 @@
 import Jwt from "jsonwebtoken";
-
 import Dotenv from "dotenv";
+import { User } from "../model/user.model.js";
 Dotenv.config();
 
-export const auth = (req, res, next) => {
-  try {
-    const token = req.body.token;
+export const authenticate = (req, res, next) => {
+  const { token } = req.body;
 
+  try {
     if (!token) {
       return res.json({
         success: false,
@@ -15,7 +15,9 @@ export const auth = (req, res, next) => {
     }
 
     try {
-      const payload = Jwt.verify(token, process.env.JWT_SECRETE);
+      let payload = Jwt.verify(token, process.env.JWT_SECRET);
+      console.log(payload);
+      console.log(User);
       req.user = payload;
     } catch (error) {
       return res.json({
@@ -48,6 +50,7 @@ export const isStudent = (req, res, next) => {
     });
   }
 };
+
 export const isAdmin = (req, res, next) => {
   try {
     if (req.user.role !== "Admin") {
@@ -55,6 +58,8 @@ export const isAdmin = (req, res, next) => {
         success: false,
         messege: "protected route for admin",
       });
+    } else {
+      next();
     }
   } catch (error) {
     return res.json({

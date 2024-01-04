@@ -56,6 +56,7 @@ export const Login = async (req, res) => {
   try {
     //fetch data
     const { email, password } = req.body;
+    console.log(req.body);
     //valid or not
     if (!email || !password) {
       return res.status(400).json({
@@ -85,7 +86,7 @@ export const Login = async (req, res) => {
     if (await bcrypt.compare(password, user.password)) {
       //create jwt token
 
-      let token = jwt.sign(payload, process.env.JWT_SECRETE, {
+      let token = jwt.sign(payload, process.env.JWT_SECRET, {
         expiresIn: "2h",
       });
       user = user.toObject();

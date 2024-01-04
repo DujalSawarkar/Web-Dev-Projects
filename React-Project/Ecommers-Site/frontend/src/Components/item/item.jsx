@@ -11,13 +11,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../Redux/Slice/CounterSlice.jsx";
 import { add, remove } from "../Redux/Slice/CartSlice.jsx";
 import Card from "../Card/Card";
-import Data2 from "../../Data2";
-import { Store } from "../Redux/Store.jsx";
+
 export const Item = () => {
   const { itemtype } = useParams();
   const count = useSelector((state) => state.Counter);
   const dispatch = useDispatch();
-  const { Cart } = useSelector((state) => state);
+  const Cart = useSelector((state) => state.Cart);
   // console.log(count);
   console.log(Cart);
   const [itemData, setItemData] = useState([]);
@@ -76,6 +75,7 @@ export const Item = () => {
       .get(`http://localhost:3000/items/${itemtype}?id=${id}`)
       .then((res) => {
         setItemData(res.data);
+        console.log(res.data[0][0].imageUrl);
         setDivArray(() => makeaArray(res.data[0].rate));
       });
   };
@@ -84,7 +84,6 @@ export const Item = () => {
     itemDatabyID(itemtype, id);
   }, [id]);
 
-  console.log(itemData[0]);
   const clickHandler = (index, setfun, fun) => {
     const updatedRatingComp = fun.map((item, i) => ({
       ...item,
@@ -104,36 +103,36 @@ export const Item = () => {
         <div className="item-detail-div1">
           <div className="item-detail-div1-1">
             <div>
-              <img src={itemData[0].imageUrl} alt="" />
+              <img src={itemData[0][0].imageUrl} alt="" />
             </div>
             <div>
-              <img src={itemData[0].imageUrl} alt="" />
+              <img src={itemData[0][0].imageUrl} alt="" />
             </div>
             <div>
-              <img src={itemData[0].imageUrl} alt="" />
+              <img src={itemData[0][0].imageUrl} alt="" />
             </div>
           </div>
           <div className="item-detail-div1-2">
-            <img src={itemData[0].imageUrl} alt="" />
+            <img src={itemData[0][0].imageUrl} alt="" />
           </div>
         </div>
         <div className="item-detail-div2">
-          <h1 className="">{itemData[0].title}</h1>
+          <h1 className="">{itemData[0][0].title}</h1>
           <div className="item-detail-div2-star">
             {divArray.map((e) => (
               <img src={star} alt={e} />
             ))}
-            <p>{`${itemData[0].rate}.0/5`}</p>
+            <p>{`${itemData[0][0].rate}.0/5`}</p>
           </div>
           <div className="item-detail-div2-price">
-            {itemData[0].discount ? (
+            {itemData[0][0].discount ? (
               <>
-                <h2>{`$${itemData[0].discount}`}</h2>
-                <p>{`$${itemData[0].price}`}</p>
-                <div>{`-${itemData[0].discountPercent}%`}</div>
+                <h2>{`$${itemData[0][0].discount}`}</h2>
+                <p>{`$${itemData[0][0].price}`}</p>
+                <div>{`-${itemData[0][0].discountPercent}%`}</div>
               </>
             ) : (
-              <h2>{`$${itemData[0].price}`}</h2>
+              <h2>{`$${itemData[0][0].price}`}</h2>
             )}
           </div>
           <p className="discription">
@@ -174,7 +173,9 @@ export const Item = () => {
 
             {Cart == undefined ? (
               <button className="addtocart-btn">Add to Cart</button>
-            ) : Cart.some((e) => e.id == itemData.id) ? (
+            ) : Cart.some((e) => {
+                return e._id == id;
+              }) ? (
               <button
                 className="addtocart-btn"
                 onClick={() => dispatch(remove(id))}
