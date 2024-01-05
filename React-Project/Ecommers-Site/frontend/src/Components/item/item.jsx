@@ -18,7 +18,7 @@ export const Item = () => {
   const dispatch = useDispatch();
   const Cart = useSelector((state) => state.Cart);
   // console.log(count);
-  console.log(Cart);
+  // console.log(Cart);
   const [itemData, setItemData] = useState([]);
   const [ratingComp, setRatingComp] = useState([
     {
@@ -75,7 +75,7 @@ export const Item = () => {
       .get(`http://localhost:3000/items/${itemtype}?id=${id}`)
       .then((res) => {
         setItemData(res.data);
-        console.log(res.data[0][0].imageUrl);
+        // console.log(res.data[0][0].imageUrl);
         setDivArray(() => makeaArray(res.data[0].rate));
       });
   };
@@ -166,7 +166,14 @@ export const Item = () => {
           <hr />
           <div className="btn-div">
             <div className="btn-div-inner">
-              <button onClick={() => dispatch(decrement())}>-</button>
+              <button
+                onClick={() => {
+
+                  return dispatch(decrement());
+                }}
+              >
+                -
+              </button>
               <p>{count < 0 ? 0 : count}</p>
               <button onClick={() => dispatch(increment())}>+</button>
             </div>

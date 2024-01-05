@@ -7,7 +7,8 @@ const Comment = (props) => {
   const data = props.data;
 
   const divArray = Array.from({ length: data.rayte }, (_, index) => index);
-  console.log(divArray);
+  // console.log(divArray);
+  
   return (
     <div className="comment-main">
       <div className="comment-star-div">

@@ -7,7 +7,7 @@ const Card = (props) => {
   const id = data._id;
   const type = data.item_type;
   const divArray = Array.from({ length: data.rate }, (_, index) => index);
-  console.log(id);
+  // console.log(id);
   // console.log(divArray);
   return (
     <Link to={`/${type}?id=${id}`}>
