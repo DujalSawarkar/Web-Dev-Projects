@@ -210,7 +210,9 @@ const Category = () => {
           </div>
           <div className="category-card-div">
             {catData.length == 0 ? (
-              <center>No Data Found</center>
+              <center className="loader-main">
+                <div class="loader"></div>
+              </center>
             ) : (
               <>
                 {catData.map((item) => (

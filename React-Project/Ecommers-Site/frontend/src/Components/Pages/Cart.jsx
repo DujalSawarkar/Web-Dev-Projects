@@ -1,36 +1,92 @@
 import React from "react";
 import RouteCard from "../routeCard/routeCard";
-
+import { useDispatch, useSelector } from "react-redux";
+import "./cart.css";
+import { FiTag } from "react-icons/fi";
+import { useParams } from "react-router-dom";
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { decrement } from "../Redux/Slice/CounterSlice";
 const Cart = () => {
+  const count = useSelector((state) => state.Counter);
+
+  const dispatch = useDispatch();
+  const Cart = useSelector((state) => state.Cart);
+  console.log(Cart);
+  // const cartvalue = useParams();
   return (
     <div>
       <RouteCard />
-      <h1>Your cart</h1>
-      <div>
-        <div></div>
-        <div>
-          <p>Order Summary</p>
-          <div>
+      <h1 className="Cartheading">Your cart</h1>
+      <div className="Cart-Main">
+        <div className="Cart-Main-product">
+          {Cart.length == 0 ? (
+            <>
+              {/* <h1>NO ITEM</h1> */}
+              <div className="loader-div">
+                <div class="loader"></div>
+              </div>
+            </>
+          ) : (
+            Cart.map((e) => (
+              <div>
+                <img src={e.imageUrl} alt="" />
+                <div>
+                  <h2>{e.title}</h2>
+                  <RiDeleteBin5Fill />
+                  <div>
+                    <p>Size : </p>
+                    <p></p>
+                  </div>
+                  <div>
+                    <p>Color :</p>
+                    <p></p>
+                  </div>
+                  <div>
+                    <p>{`$${e.price}`}</p>
+                  </div>
+                  <div className="btn-div-inner">
+                    <button
+                      onClick={() => {
+                        return dispatch(decrement());
+                      }}
+                    >
+                      -
+                    </button>
+                    <p>{count < 0 ? 0 : count}</p>
+                    <button onClick={() => dispatch(increment())}>+</button>
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+        <div className="Cart-Main-details">
+          <h2>Order Summary</h2>
+          <div className="order-summery">
             <p>Subtotal</p>
-            <p>$565</p>
+            <h3>$565</h3>
           </div>
-          <div>
+          <div className="order-summery">
             <p>Discount </p>
-            <p>-$113</p>
+            <h4>-$113</h4>
           </div>
-          <div>
+          <div className="order-summery">
             <p>Delivery Fee</p>
-            <p>$15</p>
+            <h3>$15</h3>
           </div>
 
           <hr />
-          <div>
+          <div className="order-summery">
             <p>Total</p>
-            <p>$467</p>
+            <h3>$467</h3>
+          </div>
+          <div className="order-summery">
+            <FiTag className="tag" />
+            <input type="text" placeholder="Add promo code" />
+            <button>Apply</button>
           </div>
 
-
-          
+          <button className="Check-btn">Go to Checkout </button>
         </div>
       </div>
     </div>

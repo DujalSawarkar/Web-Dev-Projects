@@ -82,14 +82,18 @@ const Home = () => {
         <img src={Calvin} alt="img" />
       </div>
       {Data == null ? (
-        <div>loading</div>
+        <div className="loader-div">
+          <div class="loader"></div>
+        </div>
       ) : (
         <Cards Data={Data} head={head1} key={1} />
       )}
       <hr className="btw-card" />
 
       {Data == null ? (
-        <div>loading</div>
+        <div className="loader-div">
+          <div class="loader"></div>
+        </div>
       ) : (
         <Cards Data={Data} head={head2} key={2} />
       )}

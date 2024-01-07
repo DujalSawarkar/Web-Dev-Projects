@@ -154,6 +154,7 @@
 .category-card-div {
   margin: auto;
   display: flex;
+  /* justify-content: ; */
   flex-wrap: wrap;
   gap: 3rem;
 }
@@ -172,4 +173,9 @@
 .pagination hr {
   width: 68vw;
   margin-left: 10rem;
+}
+
+.loader-main{
+  margin: auto;
+  margin-top: 20%;
 }

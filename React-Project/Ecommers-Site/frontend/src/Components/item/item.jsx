@@ -94,7 +94,9 @@ export const Item = () => {
   };
 
   return itemData.length == 0 ? (
-    "data not found"
+    <div className="loader-div">
+      <div class="loader"></div>
+    </div>
   ) : (
     <div>
       <RouteCard />
@@ -168,7 +170,6 @@ export const Item = () => {
             <div className="btn-div-inner">
               <button
                 onClick={() => {
-
                   return dispatch(decrement());
                 }}
               >

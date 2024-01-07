@@ -1,0 +1,117 @@
+.Cartheading {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  margin-left: 4%;
+  margin-bottom: 1rem;
+}
+.Cart-Main {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+}
+.Cart-Main-product {
+  width: 60%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.Cart-Main-details {
+  width: 40%;
+  height: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.Cart-Main-details h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.order-summery {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.order-summery p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+.order-summery h3 {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: rgba(0, 0, 0, 1);
+}
+
+.order-summery h4 {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: rgba(255, 51, 51, 1);
+}
+.order-summery input {
+  width: 326px;
+  height: 48px;
+  padding: 12px 16px 12px 16px;
+  border-radius: 62px;
+  gap: 12px;
+  background: rgba(240, 240, 240, 1);
+  padding-left: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.order-summery button {
+  width: 119px;
+  height: 48px;
+  padding: 12px 16px 12px 16px;
+  border-radius: 62px;
+  gap: 12px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+.tag {
+  position: absolute;
+  top: 38%;
+  left: 3%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+.Check-btn {
+  width: 457px;
+  height: 53px;
+  padding: 16px 54px 16px 54px;
+  border-radius: 62px;
+  gap: 12px;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+}
