@@ -6,6 +6,8 @@ import { FiTag } from "react-icons/fi";
 import { useParams } from "react-router-dom";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { decrement } from "../Redux/Slice/CounterSlice";
+import { increment } from "../Redux/Slice/CounterSlice";
+import { remove } from "../Redux/Slice/CartSlice";
 const Cart = () => {
   const count = useSelector((state) => state.Counter);
 
@@ -28,35 +30,38 @@ const Cart = () => {
             </>
           ) : (
             Cart.map((e) => (
-              <div>
-                <img src={e.imageUrl} alt="" />
-                <div>
-                  <h2>{e.title}</h2>
-                  <RiDeleteBin5Fill />
+              <>
+                <div className="cart-product">
+                  <img src={e.imageUrl} alt="" />
+                  <RiDeleteBin5Fill
+                    className="delete"
+                    onClick={() => dispatch(remove(e._id))}
+                  />
                   <div>
-                    <p>Size : </p>
-                    <p></p>
-                  </div>
-                  <div>
-                    <p>Color :</p>
-                    <p></p>
-                  </div>
-                  <div>
-                    <p>{`$${e.price}`}</p>
-                  </div>
-                  <div className="btn-div-inner">
-                    <button
-                      onClick={() => {
-                        return dispatch(decrement());
-                      }}
-                    >
-                      -
-                    </button>
-                    <p>{count < 0 ? 0 : count}</p>
-                    <button onClick={() => dispatch(increment())}>+</button>
+                    <div className="productr-title">
+                      <h2>{e.title}</h2>
+                    </div>
+                    <div className="Size-text">
+                      <p>Size : </p>
+                      <div></div>
+                    </div>
+                    <div>
+                      <p>Color :</p>
+                      <div></div>
+                    </div>
+
+                    <div className="price-text">
+                      <p>{`$${e.price}`}</p>
+                    </div>
+                    <div className="product-btn-div-inner">
+                      <button onClick={() => dispatch(decrement())}>-</button>
+                      <p>{count < 0 ? 0 : count}</p>
+                      <button onClick={() => dispatch(increment())}>+</button>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <hr />
+              </>
             ))
           )}
         </div>
