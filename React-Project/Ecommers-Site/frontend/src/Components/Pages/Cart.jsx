@@ -14,7 +14,18 @@ const Cart = () => {
   const dispatch = useDispatch();
   const Cart = useSelector((state) => state.Cart);
   console.log(Cart);
+  const actprice = Cart.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.price,
+    0
+  );
+
+  const dstprice = Cart.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.discount,
+    0
+  );
   // const cartvalue = useParams();
+
+  const showprice = actprice - dstprice;
   return (
     <div>
       <RouteCard />
@@ -51,7 +62,7 @@ const Cart = () => {
                     </div>
 
                     <div className="price-text">
-                      <p>{`$${e.price}`}</p>
+                      <p>${e.discount ? e.discount : e.price}</p>
                     </div>
                     <div className="product-btn-div-inner">
                       <button onClick={() => dispatch(decrement())}>-</button>
@@ -69,11 +80,14 @@ const Cart = () => {
           <h2>Order Summary</h2>
           <div className="order-summery">
             <p>Subtotal</p>
-            <h3>$565</h3>
+            <h3>${actprice}</h3>
           </div>
           <div className="order-summery">
             <p>Discount </p>
-            <h4>-$113</h4>
+            <h4>
+              -$
+              {dstprice}
+            </h4>
           </div>
           <div className="order-summery">
             <p>Delivery Fee</p>
@@ -83,7 +97,7 @@ const Cart = () => {
           <hr />
           <div className="order-summery">
             <p>Total</p>
-            <h3>$467</h3>
+            <h3>${showprice}</h3>
           </div>
           <div className="order-summery">
             <FiTag className="tag" />
