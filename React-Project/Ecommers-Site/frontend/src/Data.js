@@ -80,7 +80,7 @@ import axios from "axios";
 // export default Data;
 
  const getdata = async () => {
-  const { data } = await axios.get("http://localhost:3000/items/");
+  const { data } = await axios.get("http://localhost:4000/items/");
   console.log(data);
   return data;
 };

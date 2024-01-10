@@ -72,7 +72,7 @@ export const Item = () => {
     // console.log("inside api call");
 
     axios
-      .get(`http://localhost:3000/items/${itemtype}?id=${id}`)
+      .get(`http://localhost:4000/items/${itemtype}?id=${id}`)
       .then((res) => {
         setItemData(res.data);
         // console.log(res.data[0][0].imageUrl);

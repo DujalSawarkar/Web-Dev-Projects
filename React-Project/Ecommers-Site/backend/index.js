@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 app.use("/items", item);
 app.use("/user", user);
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 connectToDB().then(() => {
   app.listen(PORT, () => {

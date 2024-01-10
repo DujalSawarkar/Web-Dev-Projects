@@ -61,8 +61,8 @@ const Category = () => {
 
   const getItemByCategory = async (categoryId, item_type) => {
     const URL = item_type
-      ? `http://localhost:3000/items/find/${categoryId}?item_type=${item_type}`
-      : `http://localhost:3000/items/find/${categoryId} `;
+      ? `http://localhost:4000/items/find/${categoryId}?item_type=${item_type}`
+      : `http://localhost:4000/items/find/${categoryId} `;
 
     const { data } = await axios.get(URL);
 
