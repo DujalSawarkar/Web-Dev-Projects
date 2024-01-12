@@ -2,7 +2,7 @@ import React from "react";
 import diamond from "../diamond.png";
 const Shared = () => {
   return (
-    <div className="h-5/6 w-full">
+    <div className="h-5/6 w-full mb-20">
       <div className="h-4/6 w-10/12 m-auto mt-28">
         <div className="">
           <h2 className="text-indigo-900 font-inter text-4xl font-bold mb-2">
