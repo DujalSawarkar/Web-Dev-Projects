@@ -24,8 +24,8 @@ const Cart = () => {
     0
   );
   // const cartvalue = useParams();
-
-  const showprice = actprice - dstprice;
+  console.log(dstprice);
+  const showprice = dstprice == NaN ? actprice : actprice - dstprice;
   return (
     <div>
       <RouteCard />
@@ -64,7 +64,7 @@ const Cart = () => {
                     <div className="price-text">
                       <p>${e.discount ? e.discount : e.price}</p>
                     </div>
-                    <div className="product-btn-div-inner">
+                    <div className="product-btn-div-inner ">
                       <button onClick={() => dispatch(decrement())}>-</button>
                       <p>{count < 0 ? 0 : count}</p>
                       <button onClick={() => dispatch(increment())}>+</button>
@@ -86,7 +86,7 @@ const Cart = () => {
             <p>Discount </p>
             <h4>
               -$
-              {dstprice}
+              {dstprice == NaN ? "0" : dstprice}
             </h4>
           </div>
           <div className="order-summery">

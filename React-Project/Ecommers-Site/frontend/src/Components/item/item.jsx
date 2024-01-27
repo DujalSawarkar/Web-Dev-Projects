@@ -11,7 +11,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../Redux/Slice/CounterSlice.jsx";
 import { add, remove } from "../Redux/Slice/CartSlice.jsx";
 import Card from "../Card/Card";
-
+import { BsCheckLg } from "react-icons/bs";
+  
 export const Item = () => {
   const { itemtype } = useParams();
   const count = useSelector((state) => state.Counter);
@@ -31,6 +32,20 @@ export const Item = () => {
     },
     {
       name: "FAQs",
+      isActive: false,
+    },
+  ]);
+  const [color, setcolor] = useState([
+    {
+      name: "bg-[#7b7bbd]",
+      isActive: false,
+    },
+    {
+      name: "bg-[#bd7b7b]",
+      isActive: true,
+    },
+    {
+      name: "bg-[#7bbd7e]",
       isActive: false,
     },
   ]);
@@ -85,12 +100,12 @@ export const Item = () => {
   }, [id]);
 
   const clickHandler = (index, setfun, fun) => {
-    const updatedRatingComp = fun.map((item, i) => ({
+    const newfun = fun.map((item, i) => ({
       ...item,
       isActive: i === index,
     }));
 
-    setfun(updatedRatingComp);
+    setfun(newfun);
   };
 
   return itemData.length == 0 ? (
@@ -119,7 +134,7 @@ export const Item = () => {
           </div>
         </div>
         <div className="item-detail-div2">
-          <h1 className="">{itemData[0][0].title}</h1>
+          <h1>{itemData[0][0].title}</h1>
           <div className="item-detail-div2-star">
             {divArray.map((e) => (
               <img src={star} alt={e} />
@@ -144,9 +159,16 @@ export const Item = () => {
           <hr />
           <p className="color-h">Select Colors</p>
           <div className="color">
-            <div className="color-inner bg-[#7b7bbd]"></div>
-            <div className="color-inner bg-[#bd7b7b]"></div>
-            <div className="color-inner bg-[#7bbd7e]"></div>
+            {color.map((c, index) => (
+              <div
+                className={`color-inner ${c.name} flex items-center justify-center`}
+                onClick={() => clickHandler(index, setcolor, color)}
+                key={index}
+              >
+                {c.isActive ? <BsCheckLg className="text-2xl" /> : ""}
+                {console.log(c.name)}
+              </div>
+            ))}
           </div>
           <hr />
           <p className="size-h">Choose Size</p>

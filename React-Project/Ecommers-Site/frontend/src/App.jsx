@@ -8,7 +8,6 @@ import Login from "./Components/Pages/Login.jsx";
 import Category from "./Components/Pages/category/category.jsx";
 import New from "./New.jsx";
 import { Item } from "./Components/item/item.jsx";
-import Shared from "./shared/shared.jsx";
 
 function App() {
   // useEffect(async () => {
@@ -63,7 +62,6 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/create" element={<New />}></Route>
         <Route path="/:itemtype" element={<Item />}></Route>
-        <Route path="/shared" element={<Shared />}></Route>
         <Route path="/category">
           <Route path="/category/:categoryId" element={<Category />} />
         </Route>
