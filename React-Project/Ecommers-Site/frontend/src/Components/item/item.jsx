@@ -115,7 +115,6 @@ export const Item = () => {
   ) : (
     <div>
       <RouteCard />
-
       <div className="item-detail">
         <div className="item-detail-div1">
           <div className="item-detail-div1-1">
