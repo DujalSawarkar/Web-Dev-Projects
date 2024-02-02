@@ -25,7 +25,7 @@ const Cart = () => {
   );
   // const cartvalue = useParams();
   console.log(dstprice);
-  const showprice = dstprice == NaN ? actprice : actprice - dstprice;
+  const showprice =  dstprice;
   return (
     <div>
       <RouteCard />
@@ -85,8 +85,8 @@ const Cart = () => {
           <div className="order-summery">
             <p>Discount </p>
             <h4>
-              -$
-              {dstprice == NaN ? "0" : dstprice}
+              -${dstprice}
+              {/* {dstprice == NaN ? "0" : dstprice} */}
             </h4>
           </div>
           <div className="order-summery">
