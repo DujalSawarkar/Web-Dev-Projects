@@ -24,7 +24,7 @@ export default function BasicModal() {
   return (
     <div className="mt-20 text-2xl">
       <div className="flex items-center justify-center text-black">
-        <p className="mr-2">Wanblackt to Write Review</p>
+        <p className="mr-2">Want to Write Review</p>
         <Button onClick={handleOpen} className="text-black">
           Click Here
         </Button>
