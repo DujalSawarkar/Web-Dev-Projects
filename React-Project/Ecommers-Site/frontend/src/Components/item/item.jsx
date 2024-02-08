@@ -18,8 +18,7 @@ export const Item = () => {
   const count = useSelector((state) => state.Counter);
   const dispatch = useDispatch();
   const Cart = useSelector((state) => state.Cart);
-  // console.log(count);
-  // console.log(Cart);
+
   const [itemData, setItemData] = useState([]);
   const [ratingComp, setRatingComp] = useState([
     {
