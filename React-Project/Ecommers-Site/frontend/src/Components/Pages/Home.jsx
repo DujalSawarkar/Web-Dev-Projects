@@ -9,7 +9,6 @@ import image11 from "../imgs/Cloth-img/image11.png";
 import image13 from "../imgs/Cloth-img/image13.png";
 import image12 from "../imgs/Cloth-img/image12.png";
 import image14 from "../imgs/Cloth-img/image14.png";
-// import Data from "../../Data.js";
 import Cards from "../Card/Cards.jsx";
 import SwiperCard from "../Swiper/SwiperCard.jsx";
 import { Link, NavLink, useNavigate } from "react-router-dom";
